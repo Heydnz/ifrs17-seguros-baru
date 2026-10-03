@@ -1,0 +1,23 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "ifrs17-seguros-baru"
+version = "0.1.0"
+description = "End-to-end IFRS 17 engine for Seguros Baru, a fictional Panamanian insurer (portfolio project)."
+authors = [{ name = "Heydi" }]
+license = { text = "MIT" }
+requires-python = ">=3.10"
+dependencies = ["numpy>=1.26", "scipy>=1.11", "pandas>=2.1"]
+
+[project.optional-dependencies]
+dev = ["pytest>=8", "matplotlib>=3.8"]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
+testpaths = ["tests"]
+markers = ["slow: full-portfolio valuations (about two minutes)"]

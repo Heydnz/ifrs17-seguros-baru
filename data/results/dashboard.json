@@ -1,0 +1,2092 @@
+{
+ "balance_sheet": [
+  {
+   "closing": "2023-12-31",
+   "investments_fvpl": 14299160.0,
+   "investments_fvoci": 20000000.0,
+   "insurance_contract_assets": -0.0,
+   "reinsurance_contract_assets": 844072.0,
+   "total_assets": 35143232.0,
+   "insurance_contract_liabilities": 14550189.0,
+   "total_liabilities": 14550189.0,
+   "share_capital": 20000000.0,
+   "retained_earnings": 593623.0,
+   "insurance_finance_reserve": -580.0,
+   "fvoci_reserve": 0.0,
+   "total_equity": 20593043.0,
+   "balance_check": -0.0
+  },
+  {
+   "closing": "2024-12-31",
+   "investments_fvpl": 27410252.0,
+   "investments_fvoci": 20017693.0,
+   "insurance_contract_assets": -0.0,
+   "reinsurance_contract_assets": 2083847.0,
+   "total_assets": 49511792.0,
+   "insurance_contract_liabilities": 28066153.0,
+   "total_liabilities": 28066153.0,
+   "share_capital": 20000000.0,
+   "retained_earnings": 2608745.0,
+   "insurance_finance_reserve": 45521.0,
+   "fvoci_reserve": -1208627.0,
+   "total_equity": 21445639.0,
+   "balance_check": -0.0
+  },
+  {
+   "closing": "2025-12-31",
+   "investments_fvpl": 41779310.0,
+   "investments_fvoci": 20000000.0,
+   "insurance_contract_assets": 38473.0,
+   "reinsurance_contract_assets": 3035118.0,
+   "total_assets": 64852902.0,
+   "insurance_contract_liabilities": 39272810.0,
+   "total_liabilities": 39272810.0,
+   "share_capital": 20000000.0,
+   "retained_earnings": 5857943.0,
+   "insurance_finance_reserve": 129270.0,
+   "fvoci_reserve": -407122.0,
+   "total_equity": 25580091.0,
+   "balance_check": 0.0
+  }
+ ],
+ "profit_or_loss": [
+  {
+   "year": 2023,
+   "insurance_revenue": 9780724.0,
+   "insurance_service_expenses": -9402412.0,
+   "net_reinsurance": 72222.0,
+   "insurance_service_result": 450534.0,
+   "investment_income": 1279596.0,
+   "insurance_finance_expenses": 69651.0,
+   "reinsurance_finance_income": 13219.0,
+   "net_financial_result": 1362466.0,
+   "other_operating_expenses": -1219377.0,
+   "profit_before_tax": 593623.0,
+   "oci_insurance_finance": -25502.0,
+   "oci_reinsurance_finance": 24922.0,
+   "oci_fvoci_assets": 0.0,
+   "total_comprehensive_income": 593043.0
+  },
+  {
+   "year": 2024,
+   "insurance_revenue": 21995636.0,
+   "insurance_service_expenses": -19796288.0,
+   "net_reinsurance": -311236.0,
+   "insurance_service_result": 1888113.0,
+   "investment_income": 1761017.0,
+   "insurance_finance_expenses": -428759.0,
+   "reinsurance_finance_income": 40519.0,
+   "net_financial_result": 1372778.0,
+   "other_operating_expenses": -1245768.0,
+   "profit_before_tax": 2015122.0,
+   "oci_insurance_finance": 108964.0,
+   "oci_reinsurance_finance": -62863.0,
+   "oci_fvoci_assets": -1208627.0,
+   "total_comprehensive_income": 852596.0
+  },
+  {
+   "year": 2025,
+   "insurance_revenue": 26742566.0,
+   "insurance_service_expenses": -23580953.0,
+   "net_reinsurance": -610563.0,
+   "insurance_service_result": 2551051.0,
+   "investment_income": 2232567.0,
+   "insurance_finance_expenses": -326366.0,
+   "reinsurance_finance_income": 87040.0,
+   "net_financial_result": 1993241.0,
+   "other_operating_expenses": -1295094.0,
+   "profit_before_tax": 3249198.0,
+   "oci_insurance_finance": 58760.0,
+   "oci_reinsurance_finance": 24989.0,
+   "oci_fvoci_assets": 801506.0,
+   "total_comprehensive_income": 4134452.0
+  }
+ ],
+ "csm_by_portfolio": [
+  {
+   "closing": "2023-12-31",
+   "portfolio": "RE_VT",
+   "csm": -983949.0
+  },
+  {
+   "closing": "2023-12-31",
+   "portfolio": "VA",
+   "csm": 2278278.0
+  },
+  {
+   "closing": "2023-12-31",
+   "portfolio": "VT",
+   "csm": 2726015.0
+  },
+  {
+   "closing": "2024-12-31",
+   "portfolio": "RE_VT",
+   "csm": -1738210.0
+  },
+  {
+   "closing": "2024-12-31",
+   "portfolio": "VA",
+   "csm": 4740464.0
+  },
+  {
+   "closing": "2024-12-31",
+   "portfolio": "VT",
+   "csm": 4785364.0
+  },
+  {
+   "closing": "2025-12-31",
+   "portfolio": "RE_VT",
+   "csm": -4017491.0
+  },
+  {
+   "closing": "2025-12-31",
+   "portfolio": "VA",
+   "csm": 7084405.0
+  },
+  {
+   "closing": "2025-12-31",
+   "portfolio": "VT",
+   "csm": 10836220.0
+  }
+ ],
+ "groups": [
+  {
+   "closing": "2023-12-31",
+   "portfolio": "VT",
+   "group": "VT-2023-ONE",
+   "csm": 0.0,
+   "loss_component": 217915.0,
+   "lrc": 233437.0
+  },
+  {
+   "closing": "2023-12-31",
+   "portfolio": "VT",
+   "group": "VT-2023-RES",
+   "csm": 492964.0,
+   "loss_component": 0.0,
+   "lrc": 86377.0
+  },
+  {
+   "closing": "2023-12-31",
+   "portfolio": "VT",
+   "group": "VT-2023-SIG",
+   "csm": 2233051.0,
+   "loss_component": 0.0,
+   "lrc": 42231.0
+  },
+  {
+   "closing": "2024-12-31",
+   "portfolio": "VT",
+   "group": "VT-2023-ONE",
+   "csm": 0.0,
+   "loss_component": 379342.0,
+   "lrc": 471580.0
+  },
+  {
+   "closing": "2024-12-31",
+   "portfolio": "VT",
+   "group": "VT-2023-RES",
+   "csm": 0.0,
+   "loss_component": 172455.0,
+   "lrc": 501140.0
+  },
+  {
+   "closing": "2024-12-31",
+   "portfolio": "VT",
+   "group": "VT-2023-SIG",
+   "csm": 2232065.0,
+   "loss_component": 0.0,
+   "lrc": 453659.0
+  },
+  {
+   "closing": "2024-12-31",
+   "portfolio": "VT",
+   "group": "VT-2024-ONE",
+   "csm": 0.0,
+   "loss_component": 178158.0,
+   "lrc": 165258.0
+  },
+  {
+   "closing": "2024-12-31",
+   "portfolio": "VT",
+   "group": "VT-2024-RES",
+   "csm": 0.0,
+   "loss_component": 134152.0,
+   "lrc": 200542.0
+  },
+  {
+   "closing": "2024-12-31",
+   "portfolio": "VT",
+   "group": "VT-2024-SIG",
+   "csm": 2553299.0,
+   "loss_component": 0.0,
+   "lrc": -79631.0
+  },
+  {
+   "closing": "2025-12-31",
+   "portfolio": "VT",
+   "group": "VT-2023-ONE",
+   "csm": 0.0,
+   "loss_component": 157867.0,
+   "lrc": 391236.0
+  },
+  {
+   "closing": "2025-12-31",
+   "portfolio": "VT",
+   "group": "VT-2023-RES",
+   "csm": 383868.0,
+   "loss_component": 0.0,
+   "lrc": 506513.0
+  },
+  {
+   "closing": "2025-12-31",
+   "portfolio": "VT",
+   "group": "VT-2023-SIG",
+   "csm": 2310192.0,
+   "loss_component": 0.0,
+   "lrc": 919166.0
+  },
+  {
+   "closing": "2025-12-31",
+   "portfolio": "VT",
+   "group": "VT-2024-ONE",
+   "csm": 0.0,
+   "loss_component": 64686.0,
+   "lrc": 169695.0
+  },
+  {
+   "closing": "2025-12-31",
+   "portfolio": "VT",
+   "group": "VT-2024-RES",
+   "csm": 463028.0,
+   "loss_component": 0.0,
+   "lrc": 290428.0
+  },
+  {
+   "closing": "2025-12-31",
+   "portfolio": "VT",
+   "group": "VT-2024-SIG",
+   "csm": 2532110.0,
+   "loss_component": 0.0,
+   "lrc": 387846.0
+  },
+  {
+   "closing": "2025-12-31",
+   "portfolio": "VT",
+   "group": "VT-2025-RES",
+   "csm": 912382.0,
+   "loss_component": 0.0,
+   "lrc": -2872.0
+  },
+  {
+   "closing": "2025-12-31",
+   "portfolio": "VT",
+   "group": "VT-2025-SIG",
+   "csm": 4234639.0,
+   "loss_component": 0.0,
+   "lrc": -88101.0
+  },
+  {
+   "closing": "2023-12-31",
+   "portfolio": "VA",
+   "group": "VA-2023-RES",
+   "csm": 24036.0,
+   "loss_component": 0.0,
+   "lrc": 82190.0
+  },
+  {
+   "closing": "2023-12-31",
+   "portfolio": "VA",
+   "group": "VA-2023-SIG",
+   "csm": 2254242.0,
+   "loss_component": 0.0,
+   "lrc": 1994863.0
+  },
+  {
+   "closing": "2024-12-31",
+   "portfolio": "VA",
+   "group": "VA-2023-RES",
+   "csm": 28748.0,
+   "loss_component": 0.0,
+   "lrc": 206485.0
+  },
+  {
+   "closing": "2024-12-31",
+   "portfolio": "VA",
+   "group": "VA-2023-SIG",
+   "csm": 2486414.0,
+   "loss_component": 0.0,
+   "lrc": 5421137.0
+  },
+  {
+   "closing": "2024-12-31",
+   "portfolio": "VA",
+   "group": "VA-2024-RES",
+   "csm": 50081.0,
+   "loss_component": 0.0,
+   "lrc": 139978.0
+  },
+  {
+   "closing": "2024-12-31",
+   "portfolio": "VA",
+   "group": "VA-2024-SIG",
+   "csm": 2175220.0,
+   "loss_component": 0.0,
+   "lrc": 1945522.0
+  },
+  {
+   "closing": "2025-12-31",
+   "portfolio": "VA",
+   "group": "VA-2023-RES",
+   "csm": 31868.0,
+   "loss_component": 0.0,
+   "lrc": 319224.0
+  },
+  {
+   "closing": "2025-12-31",
+   "portfolio": "VA",
+   "group": "VA-2023-SIG",
+   "csm": 2546278.0,
+   "loss_component": 0.0,
+   "lrc": 8152535.0
+  },
+  {
+   "closing": "2025-12-31",
+   "portfolio": "VA",
+   "group": "VA-2024-RES",
+   "csm": 56943.0,
+   "loss_component": 0.0,
+   "lrc": 361957.0
+  },
+  {
+   "closing": "2025-12-31",
+   "portfolio": "VA",
+   "group": "VA-2024-SIG",
+   "csm": 2305375.0,
+   "loss_component": 0.0,
+   "lrc": 4927455.0
+  },
+  {
+   "closing": "2025-12-31",
+   "portfolio": "VA",
+   "group": "VA-2025-RES",
+   "csm": 30878.0,
+   "loss_component": 0.0,
+   "lrc": 91485.0
+  },
+  {
+   "closing": "2025-12-31",
+   "portfolio": "VA",
+   "group": "VA-2025-SIG",
+   "csm": 2113064.0,
+   "loss_component": 0.0,
+   "lrc": 1824062.0
+  },
+  {
+   "closing": "2023-12-31",
+   "portfolio": "RE_VT",
+   "group": "RE-2023",
+   "csm": -983949.0,
+   "loss_component": -87166.0,
+   "lrc": -818826.0
+  },
+  {
+   "closing": "2024-12-31",
+   "portfolio": "RE_VT",
+   "group": "RE-2023",
+   "csm": -806863.0,
+   "loss_component": -220719.0,
+   "lrc": -1166609.0
+  },
+  {
+   "closing": "2024-12-31",
+   "portfolio": "RE_VT",
+   "group": "RE-2024",
+   "csm": -931347.0,
+   "loss_component": -124924.0,
+   "lrc": -762567.0
+  },
+  {
+   "closing": "2025-12-31",
+   "portfolio": "RE_VT",
+   "group": "RE-2023",
+   "csm": -991003.0,
+   "loss_component": -63147.0,
+   "lrc": -1275904.0
+  },
+  {
+   "closing": "2025-12-31",
+   "portfolio": "RE_VT",
+   "group": "RE-2024",
+   "csm": -1112064.0,
+   "loss_component": -25874.0,
+   "lrc": -941568.0
+  },
+  {
+   "closing": "2025-12-31",
+   "portfolio": "RE_VT",
+   "group": "RE-2025",
+   "csm": -1914424.0,
+   "loss_component": -0.0,
+   "lrc": -678067.0
+  },
+  {
+   "closing": "2023-12-31",
+   "portfolio": "AUTO",
+   "group": "AUTO-2023-RES",
+   "loss_component": 0.0,
+   "lrc": 432804.0
+  },
+  {
+   "closing": "2023-12-31",
+   "portfolio": "AUTO",
+   "group": "AUTO-2023-SIG",
+   "loss_component": 0.0,
+   "lrc": 3551667.0
+  },
+  {
+   "closing": "2023-12-31",
+   "portfolio": "INC",
+   "group": "INC-2023-SIG",
+   "loss_component": 0.0,
+   "lrc": 1980201.0
+  },
+  {
+   "closing": "2023-12-31",
+   "portfolio": "TRC",
+   "group": "TRC-2023-SIG",
+   "loss_component": 0.0,
+   "lrc": 2954047.0
+  },
+  {
+   "closing": "2024-12-31",
+   "portfolio": "AUTO",
+   "group": "AUTO-2023-RES",
+   "loss_component": 0.0,
+   "lrc": 0.0
+  },
+  {
+   "closing": "2024-12-31",
+   "portfolio": "AUTO",
+   "group": "AUTO-2023-SIG",
+   "loss_component": 0.0,
+   "lrc": 3.0
+  },
+  {
+   "closing": "2024-12-31",
+   "portfolio": "AUTO",
+   "group": "AUTO-2024-RES",
+   "loss_component": 19115.0,
+   "lrc": 472906.0
+  },
+  {
+   "closing": "2024-12-31",
+   "portfolio": "AUTO",
+   "group": "AUTO-2024-SIG",
+   "loss_component": 0.0,
+   "lrc": 3625206.0
+  },
+  {
+   "closing": "2024-12-31",
+   "portfolio": "INC",
+   "group": "INC-2023-SIG",
+   "loss_component": 0.0,
+   "lrc": 0.0
+  },
+  {
+   "closing": "2024-12-31",
+   "portfolio": "INC",
+   "group": "INC-2024-SIG",
+   "loss_component": 0.0,
+   "lrc": 2000367.0
+  },
+  {
+   "closing": "2024-12-31",
+   "portfolio": "TRC",
+   "group": "TRC-2023-SIG",
+   "loss_component": 0.0,
+   "lrc": 2300064.0
+  },
+  {
+   "closing": "2024-12-31",
+   "portfolio": "TRC",
+   "group": "TRC-2024-SIG",
+   "loss_component": 0.0,
+   "lrc": 2849391.0
+  },
+  {
+   "closing": "2025-12-31",
+   "portfolio": "AUTO",
+   "group": "AUTO-2023-RES",
+   "loss_component": 0.0,
+   "lrc": 0.0
+  },
+  {
+   "closing": "2025-12-31",
+   "portfolio": "AUTO",
+   "group": "AUTO-2023-SIG",
+   "loss_component": 0.0,
+   "lrc": 3.0
+  },
+  {
+   "closing": "2025-12-31",
+   "portfolio": "AUTO",
+   "group": "AUTO-2024-RES",
+   "loss_component": 0.0,
+   "lrc": 0.0
+  },
+  {
+   "closing": "2025-12-31",
+   "portfolio": "AUTO",
+   "group": "AUTO-2024-SIG",
+   "loss_component": 0.0,
+   "lrc": 3.0
+  },
+  {
+   "closing": "2025-12-31",
+   "portfolio": "AUTO",
+   "group": "AUTO-2025-ONE",
+   "loss_component": 1395.0,
+   "lrc": 491408.0
+  },
+  {
+   "closing": "2025-12-31",
+   "portfolio": "AUTO",
+   "group": "AUTO-2025-SIG",
+   "loss_component": 0.0,
+   "lrc": 3726789.0
+  },
+  {
+   "closing": "2025-12-31",
+   "portfolio": "INC",
+   "group": "INC-2023-SIG",
+   "loss_component": 0.0,
+   "lrc": 0.0
+  },
+  {
+   "closing": "2025-12-31",
+   "portfolio": "INC",
+   "group": "INC-2024-SIG",
+   "loss_component": 0.0,
+   "lrc": 0.0
+  },
+  {
+   "closing": "2025-12-31",
+   "portfolio": "INC",
+   "group": "INC-2025-SIG",
+   "loss_component": 0.0,
+   "lrc": 2063340.0
+  },
+  {
+   "closing": "2025-12-31",
+   "portfolio": "TRC",
+   "group": "TRC-2023-SIG",
+   "loss_component": 0.0,
+   "lrc": 970795.0
+  },
+  {
+   "closing": "2025-12-31",
+   "portfolio": "TRC",
+   "group": "TRC-2024-SIG",
+   "loss_component": 0.0,
+   "lrc": 2142855.0
+  },
+  {
+   "closing": "2025-12-31",
+   "portfolio": "TRC",
+   "group": "TRC-2025-SIG",
+   "loss_component": 0.0,
+   "lrc": 2612299.0
+  }
+ ],
+ "revenue_by_portfolio": [
+  {
+   "closing": "2023-12-31",
+   "portfolio": "AUTO",
+   "insurance_revenue": 6125952.0
+  },
+  {
+   "closing": "2023-12-31",
+   "portfolio": "INC",
+   "insurance_revenue": 2013571.0
+  },
+  {
+   "closing": "2023-12-31",
+   "portfolio": "RE_VT",
+   "insurance_revenue": 0.0
+  },
+  {
+   "closing": "2023-12-31",
+   "portfolio": "TRC",
+   "insurance_revenue": 107019.0
+  },
+  {
+   "closing": "2023-12-31",
+   "portfolio": "VA",
+   "insurance_revenue": 345056.0
+  },
+  {
+   "closing": "2023-12-31",
+   "portfolio": "VT",
+   "insurance_revenue": 1189127.0
+  },
+  {
+   "closing": "2024-12-31",
+   "portfolio": "AUTO",
+   "insurance_revenue": 12325295.0
+  },
+  {
+   "closing": "2024-12-31",
+   "portfolio": "INC",
+   "insurance_revenue": 4048759.0
+  },
+  {
+   "closing": "2024-12-31",
+   "portfolio": "RE_VT",
+   "insurance_revenue": 0.0
+  },
+  {
+   "closing": "2024-12-31",
+   "portfolio": "TRC",
+   "insurance_revenue": 897353.0
+  },
+  {
+   "closing": "2024-12-31",
+   "portfolio": "VA",
+   "insurance_revenue": 1059046.0
+  },
+  {
+   "closing": "2024-12-31",
+   "portfolio": "VT",
+   "insurance_revenue": 3665183.0
+  },
+  {
+   "closing": "2025-12-31",
+   "portfolio": "AUTO",
+   "insurance_revenue": 12592327.0
+  },
+  {
+   "closing": "2025-12-31",
+   "portfolio": "INC",
+   "insurance_revenue": 4092006.0
+  },
+  {
+   "closing": "2025-12-31",
+   "portfolio": "RE_VT",
+   "insurance_revenue": 0.0
+  },
+  {
+   "closing": "2025-12-31",
+   "portfolio": "TRC",
+   "insurance_revenue": 2432571.0
+  },
+  {
+   "closing": "2025-12-31",
+   "portfolio": "VA",
+   "insurance_revenue": 1498833.0
+  },
+  {
+   "closing": "2025-12-31",
+   "portfolio": "VT",
+   "insurance_revenue": 6126830.0
+  }
+ ],
+ "csm_release_109": [
+  {
+   "portfolio": "VT",
+   "1": 1072955.0,
+   "2": 1009118.0,
+   "3": 961013.0,
+   "4": 919008.0,
+   "5": 878604.0,
+   "6-10": 3535819.0,
+   ">10": 2459703.0
+  },
+  {
+   "portfolio": "RE_VT",
+   "1": -393574.0,
+   "2": -370267.0,
+   "3": -352713.0,
+   "4": -337394.0,
+   "5": -322660.0,
+   "6-10": -1301621.0,
+   ">10": -939261.0
+  },
+  {
+   "portfolio": "VA",
+   "1": 126562.0,
+   "2": 141820.0,
+   "3": 156597.0,
+   "4": 170294.0,
+   "5": 184008.0,
+   "6-10": 1137020.0,
+   ">10": 5168104.0
+  }
+ ],
+ "sensitivities": [
+  {
+   "portfolio": "VT",
+   "change": "mortalidad +10%",
+   "profit_gross": -470263.0,
+   "equity_gross": -470263.0,
+   "profit_net": -282158.0,
+   "equity_net": -282158.0
+  },
+  {
+   "portfolio": "VT",
+   "change": "mortalidad -10%",
+   "profit_gross": 222553.0,
+   "equity_gross": 222553.0,
+   "profit_net": 133532.0,
+   "equity_net": 133532.0
+  },
+  {
+   "portfolio": "VT",
+   "change": "caducidad +10%",
+   "profit_gross": 19155.0,
+   "equity_gross": 19155.0,
+   "profit_net": 19155.0,
+   "equity_net": 19155.0
+  },
+  {
+   "portfolio": "VT",
+   "change": "caducidad -10%",
+   "profit_gross": -20327.0,
+   "equity_gross": -20327.0,
+   "profit_net": -20327.0,
+   "equity_net": -20327.0
+  },
+  {
+   "portfolio": "VT",
+   "change": "gastos +10%",
+   "profit_gross": -27723.0,
+   "equity_gross": -27723.0,
+   "profit_net": -27723.0,
+   "equity_net": -27723.0
+  },
+  {
+   "portfolio": "VT",
+   "change": "tasas +100 pb",
+   "profit_gross": 0.0,
+   "equity_gross": 48768.0,
+   "profit_net": 0.0,
+   "equity_net": 29261.0
+  },
+  {
+   "portfolio": "VT",
+   "change": "tasas -100 pb",
+   "profit_gross": 0.0,
+   "equity_gross": -97195.0,
+   "profit_net": 0.0,
+   "equity_net": -58317.0
+  },
+  {
+   "portfolio": "VA",
+   "change": "mortalidad +10%",
+   "profit_gross": 0.0,
+   "equity_gross": 0.0,
+   "profit_net": 0.0,
+   "equity_net": 0.0
+  },
+  {
+   "portfolio": "VA",
+   "change": "caducidad +10%",
+   "profit_gross": 0.0,
+   "equity_gross": 0.0,
+   "profit_net": 0.0,
+   "equity_net": 0.0
+  },
+  {
+   "portfolio": "VA",
+   "change": "caducidad -10%",
+   "profit_gross": 0.0,
+   "equity_gross": 0.0,
+   "profit_net": 0.0,
+   "equity_net": 0.0
+  },
+  {
+   "portfolio": "VA",
+   "change": "gastos +10%",
+   "profit_gross": 0.0,
+   "equity_gross": 0.0,
+   "profit_net": 0.0,
+   "equity_net": 0.0
+  },
+  {
+   "portfolio": "VA",
+   "change": "tasas +100 pb",
+   "profit_gross": -818868.0,
+   "equity_gross": -818868.0,
+   "profit_net": -818868.0,
+   "equity_net": -818868.0
+  },
+  {
+   "portfolio": "VA",
+   "change": "tasas -100 pb",
+   "profit_gross": 266184.0,
+   "equity_gross": 266184.0,
+   "profit_net": 266184.0,
+   "equity_net": 266184.0
+  },
+  {
+   "portfolio": "AUTO",
+   "change": "siniestros +5%",
+   "profit_gross": -361996.0,
+   "equity_gross": -361996.0,
+   "profit_net": -361996.0,
+   "equity_net": -361996.0
+  },
+  {
+   "portfolio": "AUTO",
+   "change": "tasas +100 pb",
+   "profit_gross": 75263.0,
+   "equity_gross": 75263.0,
+   "profit_net": 75263.0,
+   "equity_net": 75263.0
+  },
+  {
+   "portfolio": "AUTO",
+   "change": "tasas -100 pb",
+   "profit_gross": -77927.0,
+   "equity_gross": -77927.0,
+   "profit_net": -77927.0,
+   "equity_net": -77927.0
+  },
+  {
+   "portfolio": "INC",
+   "change": "siniestros +5%",
+   "profit_gross": -35970.0,
+   "equity_gross": -35970.0,
+   "profit_net": -35970.0,
+   "equity_net": -35970.0
+  },
+  {
+   "portfolio": "TRC",
+   "change": "siniestros +5%",
+   "profit_gross": -61979.0,
+   "equity_gross": -61979.0,
+   "profit_net": -61979.0,
+   "equity_net": -61979.0
+  },
+  {
+   "portfolio": "TRC",
+   "change": "tasas +100 pb",
+   "profit_gross": 5134.0,
+   "equity_gross": 5134.0,
+   "profit_net": 5134.0,
+   "equity_net": 5134.0
+  },
+  {
+   "portfolio": "TRC",
+   "change": "tasas -100 pb",
+   "profit_gross": -5209.0,
+   "equity_gross": -5209.0,
+   "profit_net": -5209.0,
+   "equity_net": -5209.0
+  },
+  {
+   "portfolio": "Inversiones",
+   "change": "tasas +100 pb",
+   "profit_gross": -208897.0,
+   "equity_gross": -1808897.0,
+   "profit_net": -208897.0,
+   "equity_net": -1808897.0
+  },
+  {
+   "portfolio": "Inversiones",
+   "change": "tasas -100 pb",
+   "profit_gross": 208897.0,
+   "equity_gross": 1808897.0,
+   "profit_net": 208897.0,
+   "equity_net": 1808897.0
+  }
+ ],
+ "discount_rates": [
+  {
+   "closing": "2023-12-31",
+   "portfolio": "VT",
+   "1y": 0.05185,
+   "5y": 0.04632,
+   "10y": 0.0497,
+   "20y": 0.05175,
+   "30y": 0.05165,
+   "40y": 0.05165
+  },
+  {
+   "closing": "2023-12-31",
+   "portfolio": "VA",
+   "1y": 0.05185,
+   "5y": 0.04632,
+   "10y": 0.0497,
+   "20y": 0.05175,
+   "30y": 0.05165,
+   "40y": 0.05165
+  },
+  {
+   "closing": "2023-12-31",
+   "portfolio": "AUTO",
+   "1y": 0.05185,
+   "5y": 0.04632,
+   "10y": 0.0497,
+   "20y": 0.05175,
+   "30y": 0.05165,
+   "40y": 0.05165
+  },
+  {
+   "closing": "2023-12-31",
+   "portfolio": "TRC",
+   "1y": 0.05185,
+   "5y": 0.04632,
+   "10y": 0.0497,
+   "20y": 0.05175,
+   "30y": 0.05165,
+   "40y": 0.05165
+  },
+  {
+   "closing": "2024-12-31",
+   "portfolio": "VT",
+   "1y": 0.04643,
+   "5y": 0.0496,
+   "10y": 0.05432,
+   "20y": 0.05843,
+   "30y": 0.05874,
+   "40y": 0.05936
+  },
+  {
+   "closing": "2024-12-31",
+   "portfolio": "VA",
+   "1y": 0.04643,
+   "5y": 0.0496,
+   "10y": 0.05432,
+   "20y": 0.05843,
+   "30y": 0.05874,
+   "40y": 0.05936
+  },
+  {
+   "closing": "2024-12-31",
+   "portfolio": "AUTO",
+   "1y": 0.04643,
+   "5y": 0.0496,
+   "10y": 0.05432,
+   "20y": 0.05843,
+   "30y": 0.05874,
+   "40y": 0.05936
+  },
+  {
+   "closing": "2024-12-31",
+   "portfolio": "TRC",
+   "1y": 0.04643,
+   "5y": 0.0496,
+   "10y": 0.05432,
+   "20y": 0.05843,
+   "30y": 0.05874,
+   "40y": 0.05936
+  },
+  {
+   "closing": "2025-12-31",
+   "portfolio": "VT",
+   "1y": 0.03877,
+   "5y": 0.04295,
+   "10y": 0.05021,
+   "20y": 0.05843,
+   "30y": 0.06131,
+   "40y": 0.06286
+  },
+  {
+   "closing": "2025-12-31",
+   "portfolio": "VA",
+   "1y": 0.03877,
+   "5y": 0.04295,
+   "10y": 0.05021,
+   "20y": 0.05843,
+   "30y": 0.06131,
+   "40y": 0.06286
+  },
+  {
+   "closing": "2025-12-31",
+   "portfolio": "AUTO",
+   "1y": 0.03877,
+   "5y": 0.04295,
+   "10y": 0.05021,
+   "20y": 0.05843,
+   "30y": 0.06131,
+   "40y": 0.06286
+  },
+  {
+   "closing": "2025-12-31",
+   "portfolio": "TRC",
+   "1y": 0.03877,
+   "5y": 0.04295,
+   "10y": 0.05021,
+   "20y": 0.05843,
+   "30y": 0.06131,
+   "40y": 0.06286
+  }
+ ],
+ "claims_development": [
+  {
+   "closing": "2023-12-31",
+   "accident_year": 2023,
+   "paid_to_date": 1401589.0,
+   "outstanding_undiscounted": 2649679.0,
+   "lic_pv": 2503681.0,
+   "ultimate_estimate": 4051268.0
+  },
+  {
+   "closing": "2024-12-31",
+   "accident_year": 2023,
+   "paid_to_date": 3348181.0,
+   "outstanding_undiscounted": 616106.0,
+   "lic_pv": 574506.0,
+   "ultimate_estimate": 3964287.0
+  },
+  {
+   "closing": "2024-12-31",
+   "accident_year": 2024,
+   "paid_to_date": 4009361.0,
+   "outstanding_undiscounted": 4793744.0,
+   "lic_pv": 4516931.0,
+   "ultimate_estimate": 8803105.0
+  },
+  {
+   "closing": "2025-12-31",
+   "accident_year": 2023,
+   "paid_to_date": 3701038.0,
+   "outstanding_undiscounted": 311704.0,
+   "lic_pv": 294355.0,
+   "ultimate_estimate": 4012742.0
+  },
+  {
+   "closing": "2025-12-31",
+   "accident_year": 2024,
+   "paid_to_date": 7215936.0,
+   "outstanding_undiscounted": 1761853.0,
+   "lic_pv": 1659989.0,
+   "ultimate_estimate": 8977789.0
+  },
+  {
+   "closing": "2025-12-31",
+   "accident_year": 2025,
+   "paid_to_date": 4441341.0,
+   "outstanding_undiscounted": 4390151.0,
+   "lic_pv": 4175359.0,
+   "ultimate_estimate": 8831492.0
+  }
+ ],
+ "trc_eligibility": [
+  {
+   "cohort": 2023,
+   "scenario": "base",
+   "year_end": 2023,
+   "lrc_gmm": 2913424.5211,
+   "lrc_paa": 2953788.8339,
+   "difference": 40364.3127,
+   "relative": 0.0139,
+   "loss_if_gmm": 0.0
+  },
+  {
+   "cohort": 2023,
+   "scenario": "base",
+   "year_end": 2024,
+   "lrc_gmm": 2326886.8187,
+   "lrc_paa": 2301080.7685,
+   "difference": -25806.0502,
+   "relative": -0.0111,
+   "loss_if_gmm": 0.0
+  },
+  {
+   "cohort": 2023,
+   "scenario": "base",
+   "year_end": 2025,
+   "lrc_gmm": 1005142.5412,
+   "lrc_paa": 970989.7697,
+   "difference": -34152.7715,
+   "relative": -0.034,
+   "loss_if_gmm": 0.0
+  },
+  {
+   "cohort": 2023,
+   "scenario": "base",
+   "year_end": 2026,
+   "lrc_gmm": 0.0,
+   "lrc_paa": 0.0,
+   "difference": 0.0,
+   "relative": 0.0,
+   "loss_if_gmm": 0.0
+  },
+  {
+   "cohort": 2023,
+   "scenario": "claims_+20%",
+   "year_end": 2023,
+   "lrc_gmm": 2913424.5211,
+   "lrc_paa": 2953788.8339,
+   "difference": 40364.3127,
+   "relative": 0.0139,
+   "loss_if_gmm": 0.0
+  },
+  {
+   "cohort": 2023,
+   "scenario": "claims_+20%",
+   "year_end": 2024,
+   "lrc_gmm": 2321700.8518,
+   "lrc_paa": 2301080.7685,
+   "difference": -20620.0833,
+   "relative": -0.0089,
+   "loss_if_gmm": 0.0
+  },
+  {
+   "cohort": 2023,
+   "scenario": "claims_+20%",
+   "year_end": 2025,
+   "lrc_gmm": 999947.8012,
+   "lrc_paa": 970989.7697,
+   "difference": -28958.0315,
+   "relative": -0.029,
+   "loss_if_gmm": 0.0
+  },
+  {
+   "cohort": 2023,
+   "scenario": "claims_+20%",
+   "year_end": 2026,
+   "lrc_gmm": 0.0,
+   "lrc_paa": 0.0,
+   "difference": 0.0,
+   "relative": 0.0,
+   "loss_if_gmm": 0.0
+  },
+  {
+   "cohort": 2023,
+   "scenario": "claims_-20%",
+   "year_end": 2023,
+   "lrc_gmm": 2913424.5211,
+   "lrc_paa": 2953788.8339,
+   "difference": 40364.3127,
+   "relative": 0.0139,
+   "loss_if_gmm": 0.0
+  },
+  {
+   "cohort": 2023,
+   "scenario": "claims_-20%",
+   "year_end": 2024,
+   "lrc_gmm": 2332072.7856,
+   "lrc_paa": 2301080.7685,
+   "difference": -30992.0171,
+   "relative": -0.0133,
+   "loss_if_gmm": 0.0
+  },
+  {
+   "cohort": 2023,
+   "scenario": "claims_-20%",
+   "year_end": 2025,
+   "lrc_gmm": 1010337.2813,
+   "lrc_paa": 970989.7697,
+   "difference": -39347.5116,
+   "relative": -0.0389,
+   "loss_if_gmm": 0.0
+  },
+  {
+   "cohort": 2023,
+   "scenario": "claims_-20%",
+   "year_end": 2026,
+   "lrc_gmm": 0.0,
+   "lrc_paa": 0.0,
+   "difference": 0.0,
+   "relative": 0.0,
+   "loss_if_gmm": 0.0
+  },
+  {
+   "cohort": 2023,
+   "scenario": "rates_+100bp",
+   "year_end": 2023,
+   "lrc_gmm": 2913424.5211,
+   "lrc_paa": 2953788.8339,
+   "difference": 40364.3127,
+   "relative": 0.0139,
+   "loss_if_gmm": 0.0
+  },
+  {
+   "cohort": 2023,
+   "scenario": "rates_+100bp",
+   "year_end": 2024,
+   "lrc_gmm": 2302072.5054,
+   "lrc_paa": 2301080.7685,
+   "difference": -991.7369,
+   "relative": -0.0004,
+   "loss_if_gmm": 0.0
+  },
+  {
+   "cohort": 2023,
+   "scenario": "rates_+100bp",
+   "year_end": 2025,
+   "lrc_gmm": 998196.4409,
+   "lrc_paa": 970989.7697,
+   "difference": -27206.6711,
+   "relative": -0.0273,
+   "loss_if_gmm": 0.0
+  },
+  {
+   "cohort": 2023,
+   "scenario": "rates_+100bp",
+   "year_end": 2026,
+   "lrc_gmm": 0.0,
+   "lrc_paa": 0.0,
+   "difference": 0.0,
+   "relative": 0.0,
+   "loss_if_gmm": 0.0
+  },
+  {
+   "cohort": 2023,
+   "scenario": "rates_-100bp",
+   "year_end": 2023,
+   "lrc_gmm": 2913424.5211,
+   "lrc_paa": 2953788.8339,
+   "difference": 40364.3127,
+   "relative": 0.0139,
+   "loss_if_gmm": 0.0
+  },
+  {
+   "cohort": 2023,
+   "scenario": "rates_-100bp",
+   "year_end": 2024,
+   "lrc_gmm": 2352117.7008,
+   "lrc_paa": 2301080.7685,
+   "difference": -51036.9323,
+   "relative": -0.0217,
+   "loss_if_gmm": 0.0
+  },
+  {
+   "cohort": 2023,
+   "scenario": "rates_-100bp",
+   "year_end": 2025,
+   "lrc_gmm": 1012161.8731,
+   "lrc_paa": 970989.7697,
+   "difference": -41172.1034,
+   "relative": -0.0407,
+   "loss_if_gmm": 0.0
+  },
+  {
+   "cohort": 2023,
+   "scenario": "rates_-100bp",
+   "year_end": 2026,
+   "lrc_gmm": 0.0,
+   "lrc_paa": 0.0,
+   "difference": 0.0,
+   "relative": 0.0,
+   "loss_if_gmm": 0.0
+  },
+  {
+   "cohort": 2023,
+   "scenario": "works_slower",
+   "year_end": 2023,
+   "lrc_gmm": 2913424.5211,
+   "lrc_paa": 2953788.8339,
+   "difference": 40364.3127,
+   "relative": 0.0139,
+   "loss_if_gmm": 0.0
+  },
+  {
+   "cohort": 2023,
+   "scenario": "works_slower",
+   "year_end": 2024,
+   "lrc_gmm": 2666941.9697,
+   "lrc_paa": 2637229.1763,
+   "difference": -29712.7934,
+   "relative": -0.0111,
+   "loss_if_gmm": 0.0
+  },
+  {
+   "cohort": 2023,
+   "scenario": "works_slower",
+   "year_end": 2025,
+   "lrc_gmm": 1350189.0766,
+   "lrc_paa": 1304861.6837,
+   "difference": -45327.3929,
+   "relative": -0.0336,
+   "loss_if_gmm": 0.0
+  },
+  {
+   "cohort": 2023,
+   "scenario": "works_slower",
+   "year_end": 2026,
+   "lrc_gmm": 0.0,
+   "lrc_paa": 0.0,
+   "difference": 0.0,
+   "relative": 0.0,
+   "loss_if_gmm": 0.0
+  },
+  {
+   "cohort": 2023,
+   "scenario": "works_faster",
+   "year_end": 2023,
+   "lrc_gmm": 2913424.5211,
+   "lrc_paa": 2953788.8339,
+   "difference": 40364.3127,
+   "relative": 0.0139,
+   "loss_if_gmm": 0.0
+  },
+  {
+   "cohort": 2023,
+   "scenario": "works_faster",
+   "year_end": 2024,
+   "lrc_gmm": 1914362.6114,
+   "lrc_paa": 1889917.65,
+   "difference": -24444.9614,
+   "relative": -0.0128,
+   "loss_if_gmm": 0.0
+  },
+  {
+   "cohort": 2023,
+   "scenario": "works_faster",
+   "year_end": 2025,
+   "lrc_gmm": 729439.8885,
+   "lrc_paa": 702360.1142,
+   "difference": -27079.7742,
+   "relative": -0.0371,
+   "loss_if_gmm": 0.0
+  },
+  {
+   "cohort": 2023,
+   "scenario": "works_faster",
+   "year_end": 2026,
+   "lrc_gmm": 0.0,
+   "lrc_paa": 0.0,
+   "difference": 0.0,
+   "relative": 0.0,
+   "loss_if_gmm": 0.0
+  },
+  {
+   "cohort": 2024,
+   "scenario": "base",
+   "year_end": 2024,
+   "lrc_gmm": 2820889.1028,
+   "lrc_paa": 2850199.5415,
+   "difference": 29310.4387,
+   "relative": 0.0104,
+   "loss_if_gmm": 0.0
+  },
+  {
+   "cohort": 2024,
+   "scenario": "base",
+   "year_end": 2025,
+   "lrc_gmm": 2176437.4284,
+   "lrc_paa": 2144804.7076,
+   "difference": -31632.7208,
+   "relative": -0.0145,
+   "loss_if_gmm": 0.0
+  },
+  {
+   "cohort": 2024,
+   "scenario": "base",
+   "year_end": 2026,
+   "lrc_gmm": 804657.8407,
+   "lrc_paa": 776058.8337,
+   "difference": -28599.007,
+   "relative": -0.0355,
+   "loss_if_gmm": 0.0
+  },
+  {
+   "cohort": 2024,
+   "scenario": "base",
+   "year_end": 2027,
+   "lrc_gmm": 0.0,
+   "lrc_paa": 0.0,
+   "difference": 0.0,
+   "relative": 0.0,
+   "loss_if_gmm": 0.0
+  },
+  {
+   "cohort": 2024,
+   "scenario": "claims_+20%",
+   "year_end": 2024,
+   "lrc_gmm": 2820889.1028,
+   "lrc_paa": 2850199.5415,
+   "difference": 29310.4387,
+   "relative": 0.0104,
+   "loss_if_gmm": 0.0
+  },
+  {
+   "cohort": 2024,
+   "scenario": "claims_+20%",
+   "year_end": 2025,
+   "lrc_gmm": 2170981.0597,
+   "lrc_paa": 2144804.7076,
+   "difference": -26176.3521,
+   "relative": -0.0121,
+   "loss_if_gmm": 0.0
+  },
+  {
+   "cohort": 2024,
+   "scenario": "claims_+20%",
+   "year_end": 2026,
+   "lrc_gmm": 800146.9329,
+   "lrc_paa": 776058.8337,
+   "difference": -24088.0992,
+   "relative": -0.0301,
+   "loss_if_gmm": 0.0
+  },
+  {
+   "cohort": 2024,
+   "scenario": "claims_+20%",
+   "year_end": 2027,
+   "lrc_gmm": 0.0,
+   "lrc_paa": 0.0,
+   "difference": 0.0,
+   "relative": 0.0,
+   "loss_if_gmm": 0.0
+  },
+  {
+   "cohort": 2024,
+   "scenario": "claims_-20%",
+   "year_end": 2024,
+   "lrc_gmm": 2820889.1028,
+   "lrc_paa": 2850199.5415,
+   "difference": 29310.4387,
+   "relative": 0.0104,
+   "loss_if_gmm": 0.0
+  },
+  {
+   "cohort": 2024,
+   "scenario": "claims_-20%",
+   "year_end": 2025,
+   "lrc_gmm": 2181893.7971,
+   "lrc_paa": 2144804.7076,
+   "difference": -37089.0895,
+   "relative": -0.017,
+   "loss_if_gmm": 0.0
+  },
+  {
+   "cohort": 2024,
+   "scenario": "claims_-20%",
+   "year_end": 2026,
+   "lrc_gmm": 809168.7485,
+   "lrc_paa": 776058.8337,
+   "difference": -33109.9148,
+   "relative": -0.0409,
+   "loss_if_gmm": 0.0
+  },
+  {
+   "cohort": 2024,
+   "scenario": "claims_-20%",
+   "year_end": 2027,
+   "lrc_gmm": 0.0,
+   "lrc_paa": 0.0,
+   "difference": 0.0,
+   "relative": 0.0,
+   "loss_if_gmm": 0.0
+  },
+  {
+   "cohort": 2024,
+   "scenario": "rates_+100bp",
+   "year_end": 2024,
+   "lrc_gmm": 2820889.1028,
+   "lrc_paa": 2850199.5415,
+   "difference": 29310.4387,
+   "relative": 0.0104,
+   "loss_if_gmm": 0.0
+  },
+  {
+   "cohort": 2024,
+   "scenario": "rates_+100bp",
+   "year_end": 2025,
+   "lrc_gmm": 2154066.0737,
+   "lrc_paa": 2144804.7076,
+   "difference": -9261.3661,
+   "relative": -0.0043,
+   "loss_if_gmm": 0.0
+  },
+  {
+   "cohort": 2024,
+   "scenario": "rates_+100bp",
+   "year_end": 2026,
+   "lrc_gmm": 799154.1399,
+   "lrc_paa": 776058.8337,
+   "difference": -23095.3062,
+   "relative": -0.0289,
+   "loss_if_gmm": 0.0
+  },
+  {
+   "cohort": 2024,
+   "scenario": "rates_+100bp",
+   "year_end": 2027,
+   "lrc_gmm": 0.0,
+   "lrc_paa": 0.0,
+   "difference": 0.0,
+   "relative": 0.0,
+   "loss_if_gmm": 0.0
+  },
+  {
+   "cohort": 2024,
+   "scenario": "rates_-100bp",
+   "year_end": 2024,
+   "lrc_gmm": 2820889.1028,
+   "lrc_paa": 2850199.5415,
+   "difference": 29310.4387,
+   "relative": 0.0104,
+   "loss_if_gmm": 0.0
+  },
+  {
+   "cohort": 2024,
+   "scenario": "rates_-100bp",
+   "year_end": 2025,
+   "lrc_gmm": 2199172.5563,
+   "lrc_paa": 2144804.7076,
+   "difference": -54367.8487,
+   "relative": -0.0247,
+   "loss_if_gmm": 0.0
+  },
+  {
+   "cohort": 2024,
+   "scenario": "rates_-100bp",
+   "year_end": 2026,
+   "lrc_gmm": 810219.1531,
+   "lrc_paa": 776058.8337,
+   "difference": -34160.3194,
+   "relative": -0.0422,
+   "loss_if_gmm": 0.0
+  },
+  {
+   "cohort": 2024,
+   "scenario": "rates_-100bp",
+   "year_end": 2027,
+   "lrc_gmm": 0.0,
+   "lrc_paa": 0.0,
+   "difference": 0.0,
+   "relative": 0.0,
+   "loss_if_gmm": 0.0
+  },
+  {
+   "cohort": 2024,
+   "scenario": "works_slower",
+   "year_end": 2024,
+   "lrc_gmm": 2820889.1028,
+   "lrc_paa": 2850199.5415,
+   "difference": 29310.4387,
+   "relative": 0.0104,
+   "loss_if_gmm": 0.0
+  },
+  {
+   "cohort": 2024,
+   "scenario": "works_slower",
+   "year_end": 2025,
+   "lrc_gmm": 2522430.0546,
+   "lrc_paa": 2485692.0205,
+   "difference": -36738.0341,
+   "relative": -0.0146,
+   "loss_if_gmm": 0.0
+  },
+  {
+   "cohort": 2024,
+   "scenario": "works_slower",
+   "year_end": 2026,
+   "lrc_gmm": 1083790.8231,
+   "lrc_paa": 1045692.8274,
+   "difference": -38097.9957,
+   "relative": -0.0352,
+   "loss_if_gmm": 0.0
+  },
+  {
+   "cohort": 2024,
+   "scenario": "works_slower",
+   "year_end": 2027,
+   "lrc_gmm": 0.0,
+   "lrc_paa": 0.0,
+   "difference": 0.0,
+   "relative": 0.0,
+   "loss_if_gmm": 0.0
+  },
+  {
+   "cohort": 2024,
+   "scenario": "works_faster",
+   "year_end": 2024,
+   "lrc_gmm": 2820889.1028,
+   "lrc_paa": 2850199.5415,
+   "difference": 29310.4387,
+   "relative": 0.0104,
+   "loss_if_gmm": 0.0
+  },
+  {
+   "cohort": 2024,
+   "scenario": "works_faster",
+   "year_end": 2025,
+   "lrc_gmm": 1774189.983,
+   "lrc_paa": 1745113.6804,
+   "difference": -29076.3026,
+   "relative": -0.0164,
+   "loss_if_gmm": 0.0
+  },
+  {
+   "cohort": 2024,
+   "scenario": "works_faster",
+   "year_end": 2026,
+   "lrc_gmm": 582920.1455,
+   "lrc_paa": 560354.8629,
+   "difference": -22565.2825,
+   "relative": -0.0387,
+   "loss_if_gmm": 0.0
+  },
+  {
+   "cohort": 2024,
+   "scenario": "works_faster",
+   "year_end": 2027,
+   "lrc_gmm": 0.0,
+   "lrc_paa": 0.0,
+   "difference": 0.0,
+   "relative": 0.0,
+   "loss_if_gmm": 0.0
+  },
+  {
+   "cohort": 2025,
+   "scenario": "base",
+   "year_end": 2025,
+   "lrc_gmm": 2592629.6539,
+   "lrc_paa": 2612110.3497,
+   "difference": 19480.6957,
+   "relative": 0.0075,
+   "loss_if_gmm": 0.0
+  },
+  {
+   "cohort": 2025,
+   "scenario": "base",
+   "year_end": 2026,
+   "lrc_gmm": 2030730.8569,
+   "lrc_paa": 1994535.952,
+   "difference": -36194.9049,
+   "relative": -0.0178,
+   "loss_if_gmm": 0.0
+  },
+  {
+   "cohort": 2025,
+   "scenario": "base",
+   "year_end": 2027,
+   "lrc_gmm": 805246.5428,
+   "lrc_paa": 773148.9676,
+   "difference": -32097.5752,
+   "relative": -0.0399,
+   "loss_if_gmm": 0.0
+  },
+  {
+   "cohort": 2025,
+   "scenario": "base",
+   "year_end": 2028,
+   "lrc_gmm": 0.0,
+   "lrc_paa": 0.0,
+   "difference": 0.0,
+   "relative": 0.0,
+   "loss_if_gmm": 0.0
+  },
+  {
+   "cohort": 2025,
+   "scenario": "claims_+20%",
+   "year_end": 2025,
+   "lrc_gmm": 2592629.6539,
+   "lrc_paa": 2612110.3497,
+   "difference": 19480.6957,
+   "relative": 0.0075,
+   "loss_if_gmm": 0.0
+  },
+  {
+   "cohort": 2025,
+   "scenario": "claims_+20%",
+   "year_end": 2026,
+   "lrc_gmm": 2027729.3316,
+   "lrc_paa": 1994535.952,
+   "difference": -33193.3796,
+   "relative": -0.0164,
+   "loss_if_gmm": 0.0
+  },
+  {
+   "cohort": 2025,
+   "scenario": "claims_+20%",
+   "year_end": 2027,
+   "lrc_gmm": 802217.7182,
+   "lrc_paa": 773148.9676,
+   "difference": -29068.7506,
+   "relative": -0.0362,
+   "loss_if_gmm": 0.0
+  },
+  {
+   "cohort": 2025,
+   "scenario": "claims_+20%",
+   "year_end": 2028,
+   "lrc_gmm": 0.0,
+   "lrc_paa": 0.0,
+   "difference": 0.0,
+   "relative": 0.0,
+   "loss_if_gmm": 0.0
+  },
+  {
+   "cohort": 2025,
+   "scenario": "claims_-20%",
+   "year_end": 2025,
+   "lrc_gmm": 2592629.6539,
+   "lrc_paa": 2612110.3497,
+   "difference": 19480.6957,
+   "relative": 0.0075,
+   "loss_if_gmm": 0.0
+  },
+  {
+   "cohort": 2025,
+   "scenario": "claims_-20%",
+   "year_end": 2026,
+   "lrc_gmm": 2033732.3822,
+   "lrc_paa": 1994535.952,
+   "difference": -39196.4302,
+   "relative": -0.0193,
+   "loss_if_gmm": 0.0
+  },
+  {
+   "cohort": 2025,
+   "scenario": "claims_-20%",
+   "year_end": 2027,
+   "lrc_gmm": 808275.3674,
+   "lrc_paa": 773148.9676,
+   "difference": -35126.3999,
+   "relative": -0.0435,
+   "loss_if_gmm": 0.0
+  },
+  {
+   "cohort": 2025,
+   "scenario": "claims_-20%",
+   "year_end": 2028,
+   "lrc_gmm": 0.0,
+   "lrc_paa": 0.0,
+   "difference": 0.0,
+   "relative": 0.0,
+   "loss_if_gmm": 0.0
+  },
+  {
+   "cohort": 2025,
+   "scenario": "rates_+100bp",
+   "year_end": 2025,
+   "lrc_gmm": 2592629.6539,
+   "lrc_paa": 2612110.3497,
+   "difference": 19480.6957,
+   "relative": 0.0075,
+   "loss_if_gmm": 0.0
+  },
+  {
+   "cohort": 2025,
+   "scenario": "rates_+100bp",
+   "year_end": 2026,
+   "lrc_gmm": 2009591.2946,
+   "lrc_paa": 1994535.952,
+   "difference": -15055.3427,
+   "relative": -0.0075,
+   "loss_if_gmm": 0.0
+  },
+  {
+   "cohort": 2025,
+   "scenario": "rates_+100bp",
+   "year_end": 2027,
+   "lrc_gmm": 799759.6875,
+   "lrc_paa": 773148.9676,
+   "difference": -26610.7199,
+   "relative": -0.0333,
+   "loss_if_gmm": 0.0
+  },
+  {
+   "cohort": 2025,
+   "scenario": "rates_+100bp",
+   "year_end": 2028,
+   "lrc_gmm": 0.0,
+   "lrc_paa": 0.0,
+   "difference": 0.0,
+   "relative": 0.0,
+   "loss_if_gmm": 0.0
+  },
+  {
+   "cohort": 2025,
+   "scenario": "rates_-100bp",
+   "year_end": 2025,
+   "lrc_gmm": 2592629.6539,
+   "lrc_paa": 2612110.3497,
+   "difference": 19480.6957,
+   "relative": 0.0075,
+   "loss_if_gmm": 0.0
+  },
+  {
+   "cohort": 2025,
+   "scenario": "rates_-100bp",
+   "year_end": 2026,
+   "lrc_gmm": 2052217.9051,
+   "lrc_paa": 1994535.952,
+   "difference": -57681.9532,
+   "relative": -0.0281,
+   "loss_if_gmm": 0.0
+  },
+  {
+   "cohort": 2025,
+   "scenario": "rates_-100bp",
+   "year_end": 2027,
+   "lrc_gmm": 810790.5437,
+   "lrc_paa": 773148.9676,
+   "difference": -37641.5761,
+   "relative": -0.0464,
+   "loss_if_gmm": 0.0
+  },
+  {
+   "cohort": 2025,
+   "scenario": "rates_-100bp",
+   "year_end": 2028,
+   "lrc_gmm": 0.0,
+   "lrc_paa": 0.0,
+   "difference": 0.0,
+   "relative": 0.0,
+   "loss_if_gmm": 0.0
+  },
+  {
+   "cohort": 2025,
+   "scenario": "works_slower",
+   "year_end": 2025,
+   "lrc_gmm": 2592629.6539,
+   "lrc_paa": 2612110.3497,
+   "difference": 19480.6957,
+   "relative": 0.0075,
+   "loss_if_gmm": 0.0
+  },
+  {
+   "cohort": 2025,
+   "scenario": "works_slower",
+   "year_end": 2026,
+   "lrc_gmm": 2344147.9004,
+   "lrc_paa": 2301585.8429,
+   "difference": -42562.0575,
+   "relative": -0.0182,
+   "loss_if_gmm": 0.0
+  },
+  {
+   "cohort": 2025,
+   "scenario": "works_slower",
+   "year_end": 2027,
+   "lrc_gmm": 1086208.7601,
+   "lrc_paa": 1042932.8402,
+   "difference": -43275.9199,
+   "relative": -0.0398,
+   "loss_if_gmm": 0.0
+  },
+  {
+   "cohort": 2025,
+   "scenario": "works_slower",
+   "year_end": 2028,
+   "lrc_gmm": 0.0,
+   "lrc_paa": 0.0,
+   "difference": 0.0,
+   "relative": 0.0,
+   "loss_if_gmm": 0.0
+  },
+  {
+   "cohort": 2025,
+   "scenario": "works_faster",
+   "year_end": 2025,
+   "lrc_gmm": 2592629.6539,
+   "lrc_paa": 2612110.3497,
+   "difference": 19480.6957,
+   "relative": 0.0075,
+   "loss_if_gmm": 0.0
+  },
+  {
+   "cohort": 2025,
+   "scenario": "works_faster",
+   "year_end": 2026,
+   "lrc_gmm": 1660481.0392,
+   "lrc_paa": 1628410.7931,
+   "difference": -32070.2461,
+   "relative": -0.0193,
+   "loss_if_gmm": 0.0
+  },
+  {
+   "cohort": 2025,
+   "scenario": "works_faster",
+   "year_end": 2027,
+   "lrc_gmm": 582624.608,
+   "lrc_paa": 557769.7913,
+   "difference": -24854.8168,
+   "relative": -0.0427,
+   "loss_if_gmm": 0.0
+  },
+  {
+   "cohort": 2025,
+   "scenario": "works_faster",
+   "year_end": 2028,
+   "lrc_gmm": 0.0,
+   "lrc_paa": 0.0,
+   "difference": 0.0,
+   "relative": 0.0,
+   "loss_if_gmm": 0.0
+  }
+ ],
+ "classification_paa": [
+  {
+   "line": "AUTO",
+   "segment": "flotas",
+   "cohort": 2023,
+   "policies": 1500,
+   "premium": 1355159.55,
+   "expected_claims": 908234.8982,
+   "ra_lrc": 85021.5965,
+   "loss_ratio": 0.6702,
+   "combined_ratio": 0.9629,
+   "class": "RES",
+   "group": "AUTO-2023-RES"
+  },
+  {
+   "line": "AUTO",
+   "segment": "particulares",
+   "cohort": 2023,
+   "policies": 18500,
+   "premium": 10851928.03,
+   "expected_claims": 6928203.2501,
+   "ra_lrc": 360195.3285,
+   "loss_ratio": 0.6384,
+   "combined_ratio": 0.9016,
+   "class": "SIG",
+   "group": "AUTO-2023-SIG"
+  },
+  {
+   "line": "AUTO",
+   "segment": "flotas",
+   "cohort": 2024,
+   "policies": 1500,
+   "premium": 1379615.64,
+   "expected_claims": 934017.833,
+   "ra_lrc": 87435.1861,
+   "loss_ratio": 0.677,
+   "combined_ratio": 0.9704,
+   "class": "RES",
+   "group": "AUTO-2024-RES"
+  },
+  {
+   "line": "AUTO",
+   "segment": "particulares",
+   "cohort": 2024,
+   "policies": 18500,
+   "premium": 11088704.09,
+   "expected_claims": 7122598.58,
+   "ra_lrc": 370301.8868,
+   "loss_ratio": 0.6423,
+   "combined_ratio": 0.9057,
+   "class": "SIG",
+   "group": "AUTO-2024-SIG"
+  },
+  {
+   "line": "AUTO",
+   "segment": "flotas",
+   "cohort": 2025,
+   "policies": 1500,
+   "premium": 1484537.91,
+   "expected_claims": 1095311.911,
+   "ra_lrc": 102534.2316,
+   "loss_ratio": 0.7378,
+   "combined_ratio": 1.0369,
+   "class": "ONE",
+   "group": "AUTO-2025-ONE"
+  },
+  {
+   "line": "AUTO",
+   "segment": "particulares",
+   "cohort": 2025,
+   "policies": 18500,
+   "premium": 11330429.72,
+   "expected_claims": 7333868.514,
+   "ra_lrc": 381285.7509,
+   "loss_ratio": 0.6473,
+   "combined_ratio": 0.9109,
+   "class": "SIG",
+   "group": "AUTO-2025-SIG"
+  },
+  {
+   "line": "INC",
+   "segment": "hogar_comercio",
+   "cohort": 2023,
+   "policies": 8000,
+   "premium": 3993771.86,
+   "expected_claims": 2040687.7933,
+   "ra_lrc": 296732.5799,
+   "loss_ratio": 0.511,
+   "combined_ratio": 0.9153,
+   "class": "SIG",
+   "group": "INC-2023-SIG"
+  },
+  {
+   "line": "INC",
+   "segment": "hogar_comercio",
+   "cohort": 2024,
+   "policies": 8000,
+   "premium": 4068924.35,
+   "expected_claims": 2096054.418,
+   "ra_lrc": 304783.3369,
+   "loss_ratio": 0.5151,
+   "combined_ratio": 0.92,
+   "class": "SIG",
+   "group": "INC-2024-SIG"
+  },
+  {
+   "line": "INC",
+   "segment": "hogar_comercio",
+   "cohort": 2025,
+   "policies": 8000,
+   "premium": 4154979.96,
+   "expected_claims": 2156379.457,
+   "ra_lrc": 313555.0875,
+   "loss_ratio": 0.519,
+   "combined_ratio": 0.9245,
+   "class": "SIG",
+   "group": "INC-2025-SIG"
+  },
+  {
+   "line": "TRC",
+   "segment": "construccion",
+   "cohort": 2023,
+   "policies": 150,
+   "premium": 3463890.0,
+   "expected_claims": 1905139.5,
+   "ra_lrc": 356435.0031,
+   "loss_ratio": 0.55,
+   "combined_ratio": 0.8429,
+   "class": "SIG",
+   "group": "TRC-2023-SIG"
+  },
+  {
+   "line": "TRC",
+   "segment": "construccion",
+   "cohort": 2024,
+   "policies": 150,
+   "premium": 3392136.0,
+   "expected_claims": 1865674.8,
+   "ra_lrc": 349051.5015,
+   "loss_ratio": 0.55,
+   "combined_ratio": 0.8429,
+   "class": "SIG",
+   "group": "TRC-2024-SIG"
+  },
+  {
+   "line": "TRC",
+   "segment": "construccion",
+   "cohort": 2025,
+   "policies": 150,
+   "premium": 3087678.0,
+   "expected_claims": 1698222.9,
+   "ra_lrc": 317722.7098,
+   "loss_ratio": 0.55,
+   "combined_ratio": 0.8429,
+   "class": "SIG",
+   "group": "TRC-2025-SIG"
+  }
+ ],
+ "confidence": [
+  {
+   "portfolio": "Vida temporal",
+   "technique": "costo de capital 6%",
+   "risk_adjustment": 3413217.0478,
+   "capital_99_5": 7491575.9942,
+   "confidence_level": 0.8797
+  },
+  {
+   "portfolio": "Daños (LIC)",
+   "technique": "percentil 75, lognormal, correlación 25%",
+   "risk_adjustment": 769958.2665,
+   "capital_99_5": NaN,
+   "confidence_level": 0.7327
+  }
+ ]
+}

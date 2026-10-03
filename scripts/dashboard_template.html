@@ -1,0 +1,338 @@
+<title>Seguros Barú IFRS 17</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&family=Source+Serif+4:opsz,wght@8..60,600;8..60,700&display=swap">
+<style>
+/* Layout: an actuarial closing pack — year switch on top, statements side by side, then the CSM cascade, the groups and the disclosures. */
+:root {
+  --bg: #f2f5f4; --panel: #ffffff; --ink: #14232a; --muted: #56676c; --line: #d6dfdc;
+  --accent: #0c6870; --accent-soft: #d8ecec; --loss: #b0392d; --loss-soft: #f6dfdb; --gold: #8f6c12; --good: #2d7a4c;
+  --s1: #0c6870; --s2: #3b86ad; --s3: #8f6c12; --s4: #6d55a0; --s5: #5f8a2b;
+  --display: "Source Serif 4", Georgia, "Times New Roman", serif;
+  --body: "IBM Plex Sans", "Segoe UI", system-ui, sans-serif;
+  --mono: "IBM Plex Mono", ui-monospace, "SFMono-Regular", Menlo, monospace;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #0e1618; --panel: #142023; --ink: #e2ebe9; --muted: #9db0b2; --line: #263639;
+    --accent: #55b6be; --accent-soft: #173b3f; --loss: #e57d70; --loss-soft: #3b201c; --gold: #d8b04e; --good: #6cc08f;
+    --s1: #55b6be; --s2: #7ab8dc; --s3: #d8b04e; --s4: #a892d6; --s5: #9cc46a; color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #0e1618; --panel: #142023; --ink: #e2ebe9; --muted: #9db0b2; --line: #263639;
+  --accent: #55b6be; --accent-soft: #173b3f; --loss: #e57d70; --loss-soft: #3b201c; --gold: #d8b04e; --good: #6cc08f;
+  --s1: #55b6be; --s2: #7ab8dc; --s3: #d8b04e; --s4: #a892d6; --s5: #9cc46a; color-scheme: dark;
+}
+* { box-sizing: border-box; }
+body { background: var(--bg); color: var(--ink); font-family: var(--body); font-size: 15px; line-height: 1.5; margin: 0; }
+.wrap { max-width: 1160px; margin: 0 auto; padding-inline: 16px; padding-block: 28px 56px; display: grid; gap: 22px; }
+header { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: flex-end; gap: 16px; }
+.eyebrow { font-size: 12px; letter-spacing: .08em; text-transform: uppercase; color: var(--muted); margin: 0 0 4px; }
+h1 { font-family: var(--display); font-size: clamp(28px, 4vw, 40px); margin: 0; line-height: 1.1; text-wrap: balance; }
+h2 { font-family: var(--display); font-size: 21px; margin: 0; text-wrap: balance; }
+.sub { color: var(--muted); margin: 6px 0 0; max-width: 62ch; }
+.seg { display: inline-flex; border: 1px solid var(--line); border-radius: 8px; overflow: hidden; background: var(--panel); }
+.seg button { font: 500 14px var(--body); color: var(--ink); background: transparent; border: 0; padding: 8px 16px; cursor: pointer; }
+.seg button + button { border-left: 1px solid var(--line); }
+.seg button[aria-pressed="true"] { background: var(--accent); color: var(--panel); }
+.seg button:focus-visible, select:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+.kpis { display: grid; grid-template-columns: repeat(auto-fit, minmax(210px, 1fr)); gap: 12px; }
+.kpi { background: var(--panel); border: 1px solid var(--line); border-radius: 10px; padding: 14px 16px; display: grid; gap: 2px; }
+.kpi .k { font-size: 12px; letter-spacing: .06em; text-transform: uppercase; color: var(--muted); }
+.kpi .v { font-family: var(--mono); font-size: 26px; font-weight: 500; font-variant-numeric: tabular-nums; }
+.kpi .d { font-size: 13px; color: var(--muted); }
+.grid2 { display: grid; grid-template-columns: repeat(auto-fit, minmax(420px, 1fr)); gap: 22px; }
+@media (max-width: 480px) { .grid2 { grid-template-columns: 1fr; } }
+section.card { background: var(--panel); border: 1px solid var(--line); border-radius: 12px; padding: 18px; display: grid; gap: 12px; min-width: 0; }
+.head { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: baseline; gap: 8px; }
+.ref { font-family: var(--mono); font-size: 12px; color: var(--muted); }
+.note { color: var(--muted); font-size: 13px; margin: 0; max-width: 75ch; }
+.scroll { overflow-x: auto; }
+table { border-collapse: collapse; width: 100%; font-size: 14px; }
+th, td { padding: 6px 8px; border-bottom: 1px solid var(--line); text-align: right; white-space: nowrap; }
+th:first-child, td:first-child, .txt { text-align: left; white-space: normal; }
+th { font-size: 12px; font-weight: 600; color: var(--muted); letter-spacing: .03em; }
+td.num, th.num { font-family: var(--mono); font-variant-numeric: tabular-nums; }
+tr.total td { font-weight: 600; border-top: 1px solid var(--muted); }
+tr.grand td { background: var(--accent-soft); }
+td.sel, th.sel { background: color-mix(in srgb, var(--accent-soft) 60%, transparent); }
+tr.onerous td { background: var(--loss-soft); }
+.chip { display: inline-block; font: 600 11px var(--mono); letter-spacing: .04em; padding: 2px 7px; border-radius: 999px; border: 1px solid var(--line); }
+.chip.SIG { color: var(--good); border-color: var(--good); }
+.chip.RES { color: var(--gold); border-color: var(--gold); }
+.chip.ONE { color: var(--loss); border-color: var(--loss); }
+.chip.RE { color: var(--s2); border-color: var(--s2); }
+select { font: 14px var(--body); color: var(--ink); background: var(--panel); border: 1px solid var(--line); border-radius: 6px; padding: 5px 8px; }
+svg { width: 100%; height: auto; display: block; }
+svg text { fill: var(--muted); font-family: var(--body); font-size: 12px; }
+svg .val { fill: var(--ink); font-family: var(--mono); font-size: 11.5px; }
+.legend { display: flex; flex-wrap: wrap; gap: 6px 16px; font-size: 13px; color: var(--muted); }
+.legend span::before { content: ""; display: inline-block; width: 10px; height: 10px; border-radius: 2px; margin-right: 6px; background: var(--c); vertical-align: -1px; }
+.ok { color: var(--good); font-weight: 600; }
+footer { color: var(--muted); font-size: 13px; display: grid; gap: 6px; }
+footer a { color: var(--accent); }
+@media (prefers-reduced-motion: no-preference) { .bar { transition: opacity .2s; } }
+</style>
+<div class="wrap">
+  <header>
+    <div>
+      <p class="eyebrow">Proyecto de portafolio · IFRS 17 · aseguradora ficticia con datos sintéticos</p>
+      <h1>Seguros Barú, S.A.</h1>
+      <p class="sub">Cierres al 31 de diciembre de 2023, 2024 y 2025, en USD. Vida temporal, vida con ahorro, autos, incendio/hogar, todo riesgo construcción y una cuota parte cedida.</p>
+    </div>
+    <div class="seg" role="group" aria-label="Año del cierre" id="years"></div>
+  </header>
+
+  <div class="kpis" id="kpis"></div>
+
+  <div class="grid2">
+    <section class="card">
+      <div class="head"><h2>Estado de resultados</h2><span class="ref">par. 80–92</span></div>
+      <div class="scroll"><table id="pl"></table></div>
+    </section>
+    <section class="card">
+      <div class="head"><h2>Estado de situación financiera</h2><span class="ref">par. 78–79</span></div>
+      <div class="scroll"><table id="bs"></table></div>
+      <p class="note" id="checknote"></p>
+    </section>
+  </div>
+
+  <section class="card">
+    <div class="head">
+      <h2>Cascada del margen contractual de servicio</h2>
+      <label class="ref" for="wfport">Portafolio
+        <select id="wfport">
+          <option value="VT">Vida temporal</option><option value="VA">Vida con ahorro</option><option value="RE_VT">Reaseguro cedido (costo neto)</option>
+        </select>
+      </label>
+    </div>
+    <div id="wf"></div>
+    <p class="note">Saldo inicial, contratos nuevos (par. 38), acreción a tasa bloqueada (B72(b)), cambios relacionados con servicio futuro (par. 44(c), B96), recuperación de pérdidas del reaseguro (66A) y liberación por unidades de cobertura (B119). Los aumentos que superan el CSM no lo vuelven negativo: van al componente de pérdida.</p>
+  </section>
+
+  <section class="card">
+    <div class="head"><h2>Grupos de contratos al cierre</h2><span class="ref">par. 14–24</span></div>
+    <div class="scroll"><table id="groups"></table></div>
+    <p class="note">SIG: sin posibilidad significativa de volverse oneroso; RES: el resto; ONE: oneroso. Las filas sombreadas tienen componente de pérdida. El valor en libros incluye el pasivo por siniestros incurridos; el reaseguro cedido es un activo.</p>
+  </section>
+
+  <div class="grid2">
+    <section class="card">
+      <div class="head"><h2>Ingresos por seguros por portafolio</h2><span class="ref">par. 83, B121–B126</span></div>
+      <div class="legend" id="revleg"></div>
+      <div id="rev"></div>
+    </section>
+    <section class="card">
+      <div class="head"><h2>Liberación esperada del CSM al 31-dic-2025</h2><span class="ref">par. 109</span></div>
+      <div class="legend" id="bandleg"></div>
+      <div id="bands"></div>
+    </section>
+  </div>
+
+  <div class="grid2">
+    <section class="card">
+      <div class="head"><h2>Sensibilidades al 31-dic-2025</h2><span class="ref">par. 128</span></div>
+      <div id="sens"></div>
+      <p class="note">Efecto en el patrimonio, neto de reaseguro. Los cambios no financieros que absorbe el CSM no aparecen: solo afectan a los grupos onerosos.</p>
+    </section>
+    <section class="card">
+      <div class="head">
+        <h2>TRC: PAA frente a GMM</h2>
+        <label class="ref" for="trccoh">Cohorte
+          <select id="trccoh"><option>2023</option><option>2024</option><option selected>2025</option></select>
+        </label>
+      </div>
+      <div class="legend" id="trcleg"></div>
+      <div id="trc"></div>
+      <p class="note">Diferencia del LRC con PAA respecto del GMM en cada cierre de la cobertura y en siete escenarios. Dentro de la banda de ±5% el PAA es elegible (par. 53(a), 54).</p>
+    </section>
+  </div>
+
+  <footer>
+    <div id="conf"></div>
+    <div>Seguros Barú es ficticia. Todos los datos son sintéticos, generados con semilla fija; las curvas de descuento son las HQM del Tesoro de EE. UU. al cierre de cada año. Motor en Python validado con los Ejemplos Ilustrativos del IASB. Autora: Heydi · <a href="https://github.com/Heydnz" target="_blank" rel="noopener">github.com/Heydnz</a></div>
+  </footer>
+</div>
+<script>
+const D = /*__DATA__*/null;
+const css = n => getComputedStyle(document.documentElement).getPropertyValue(n).trim();
+const fmt = v => {
+  if (v === null || v === undefined) return "—";
+  const r = Math.round(v);
+  if (r === 0) return "–";
+  const s = Math.abs(r).toLocaleString("en-US").replace(/,/g, ".");
+  return r < 0 ? "(" + s + ")" : s;
+};
+const mill = v => (v / 1e6).toLocaleString("es-ES", { minimumFractionDigits: 1, maximumFractionDigits: 1 }) + " M";
+const compact = v => Math.abs(v) >= 1e6 ? mill(v) : (v < 0 ? "−" : "") + Math.round(Math.abs(v) / 1e3).toLocaleString("es-ES") + " mil";
+let year = 2025;
+try { const s = localStorage.getItem("baru-year"); if (s && D.years.includes(+s)) year = +s; } catch (e) {}
+
+function el(tag, attrs = {}, html = "") { const e = document.createElement(tag); for (const k in attrs) e.setAttribute(k, attrs[k]); e.innerHTML = html; return e; }
+const NS = "http://www.w3.org/2000/svg";
+function S(tag, attrs = {}, text) { const e = document.createElementNS(NS, tag); for (const k in attrs) e.setAttribute(k, attrs[k]); if (text !== undefined) e.textContent = text; return e; }
+function niceTicks(lo, hi, n = 5) {
+  const span = hi - lo || 1, raw = span / n, mag = Math.pow(10, Math.floor(Math.log10(raw)));
+  const step = [1, 2, 2.5, 5, 10].map(m => m * mag).find(s => span / s <= n) || 10 * mag;
+  const t = []; for (let v = Math.floor(lo / step) * step; v <= hi + 1e-9; v += step) t.push(v); return t;
+}
+
+function renderYears() {
+  const box = document.getElementById("years"); box.innerHTML = "";
+  D.years.forEach(y => {
+    const b = el("button", { type: "button", "aria-pressed": String(y === year), id: "y" + y }, String(y));
+    b.onclick = () => { year = y; try { localStorage.setItem("baru-year", y); } catch (e) {} renderAll(); };
+    box.appendChild(b);
+  });
+}
+
+function renderKpis() {
+  const i = D.years.indexOf(year);
+  const pl = k => D.pl.find(r => r.key === k).values, bs = k => D.bs.find(r => r.key === k).values;
+  const csmLife = y => D.groups.filter(g => g.closing === y && (g.portfolio === "VT" || g.portfolio === "VA")).reduce((a, g) => a + (g.csm || 0), 0);
+  const items = [
+    ["Ingresos por seguros", pl("insurance_revenue")],
+    ["Resultado antes de impuestos", pl("profit_before_tax")],
+    ["Patrimonio al cierre", bs("total_equity")],
+    ["CSM de vida al cierre", D.years.map(csmLife)],
+  ];
+  const box = document.getElementById("kpis"); box.innerHTML = "";
+  items.forEach(([k, v]) => {
+    const prev = i > 0 ? v[i - 1] : null;
+    const d = prev ? ((v[i] - prev) / Math.abs(prev) * 100) : null;
+    box.appendChild(el("div", { class: "kpi" },
+      `<span class="k">${k}</span><span class="v">USD ${mill(v[i])}</span><span class="d">${d === null ? "primer año de operación" : (d >= 0 ? "+" : "") + d.toFixed(0) + "% frente a " + (year - 1)}</span>`));
+  });
+}
+
+function statement(id, rows, cols) {
+  const t = document.getElementById(id); const i = D.years.indexOf(year);
+  let h = "<thead><tr><th>USD</th>" + cols.map((c, j) => `<th class="num${j === i ? " sel" : ""}">${c}</th>`).join("") + "</tr></thead><tbody>";
+  rows.forEach(r => {
+    h += `<tr class="${r.total ? "total" : ""}${r.grand ? " grand" : ""}"><td>${r.label}</td>` +
+      r.values.map((v, j) => `<td class="num${j === i ? " sel" : ""}">${fmt(v)}</td>`).join("") + "</tr>";
+  });
+  t.innerHTML = h + "</tbody>";
+}
+
+function renderStatements() {
+  statement("pl", D.pl, D.years.map(String));
+  statement("bs", D.bs, D.years.map(y => "31-dic-" + y));
+  const ok = D.check.every(c => Math.abs(c) < 1);
+  document.getElementById("checknote").innerHTML = ok
+    ? `<span class="ok">Cuadra:</span> activos menos pasivos es igual al patrimonio en los tres cierres (diferencia 0).`
+    : "Revisar: el balance no cuadra.";
+}
+
+function renderWaterfall() {
+  const port = document.getElementById("wfport").value;
+  const w = D.waterfall[port + "-" + year]; const box = document.getElementById("wf"); box.innerHTML = "";
+  const steps = [{ label: "Saldo inicial", value: w.opening, base: true }, ...w.steps, { label: "Saldo final", value: w.closing, base: true }];
+  let run = 0; const bars = steps.map(s => { if (s.base) { run = s.value; return { ...s, a: 0, b: s.value }; } const a = run; run += s.value; return { ...s, a, b: run }; });
+  const lo = Math.min(0, ...bars.map(b => Math.min(b.a, b.b))), hi = Math.max(...bars.map(b => Math.max(b.a, b.b)), 1);
+  const W = 760, H = 300, L = 70, R = 12, T = 18, B = 54, bw = (W - L - R) / bars.length;
+  const y = v => T + (H - T - B) * (1 - (v - lo) / (hi - lo));
+  const svg = S("svg", { viewBox: `0 0 ${W} ${H}`, role: "img", "aria-label": "Cascada del CSM" });
+  niceTicks(lo, hi).forEach(t => { svg.appendChild(S("line", { x1: L, x2: W - R, y1: y(t), y2: y(t), stroke: css("--line") })); svg.appendChild(S("text", { x: L - 8, y: y(t) + 4, "text-anchor": "end" }, mill(t))); });
+  bars.forEach((b, k) => {
+    const x = L + k * bw + bw * 0.15, top = y(Math.max(b.a, b.b)), h = Math.max(1, Math.abs(y(b.a) - y(b.b)));
+    const color = b.base ? css("--s1") : (b.value >= 0 ? css("--good") : css("--loss"));
+    svg.appendChild(S("rect", { x, y: top, width: bw * 0.7, height: h, fill: color, rx: 2, class: "bar" }));
+    svg.appendChild(S("text", { x: x + bw * 0.35, y: top - 5, "text-anchor": "middle", class: "val" }, (b.base || b.value < 0 ? "" : "+") + mill(b.value)));
+    const words = b.label.split(" "); const mid = Math.ceil(words.length / 2);
+    [words.slice(0, mid).join(" "), words.slice(mid).join(" ")].forEach((ln, j) => ln && svg.appendChild(S("text", { x: x + bw * 0.35, y: H - B + 18 + j * 14, "text-anchor": "middle" }, ln)));
+  });
+  box.appendChild(svg);
+}
+
+function renderGroups() {
+  const rows = D.groups.filter(g => g.closing === year).sort((a, b) => a.portfolio.localeCompare(b.portfolio) || a.group.localeCompare(b.group));
+  let h = "<thead><tr><th>Grupo</th><th class='txt'>Portafolio</th><th class='txt'>Modelo</th><th class='txt'>Rentabilidad</th><th class='num'>CSM</th><th class='num'>Componente de pérdida</th><th class='num'>Valor en libros</th></tr></thead><tbody>";
+  rows.forEach(g => {
+    h += `<tr class="${g.lc > 0 && g.class !== "RE" ? "onerous" : ""}"><td>${g.group}</td><td class="txt">${D.portfolios[g.portfolio]}</td><td class="txt">${g.model}</td>` +
+      `<td class="txt"><span class="chip ${g.class}">${g.class === "RE" ? "cedido" : g.class}</span></td><td class="num">${g.csm === null ? "—" : fmt(g.csm)}</td>` +
+      `<td class="num">${fmt(g.lc)}</td><td class="num">${fmt(g.carrying)}</td></tr>`;
+  });
+  document.getElementById("groups").innerHTML = h + "</tbody>";
+}
+
+function legend(id, items) { document.getElementById(id).innerHTML = items.map(([n, c]) => `<span style="--c:${c}">${n}</span>`).join(""); }
+
+function renderRevenue() {
+  const ports = ["AUTO", "INC", "TRC", "VT", "VA"], cols = ["--s1", "--s2", "--s3", "--s4", "--s5"].map(css);
+  legend("revleg", ports.map((p, k) => [D.portfolios[p], cols[k]]));
+  const tot = D.years.map((_, i) => ports.reduce((a, p) => a + D.revenue[p][i], 0)), hi = Math.max(...tot);
+  const W = 520, H = 260, L = 56, R = 10, T = 16, B = 30, bw = (W - L - R) / 3;
+  const y = v => T + (H - T - B) * (1 - v / hi);
+  const svg = S("svg", { viewBox: `0 0 ${W} ${H}`, role: "img", "aria-label": "Ingresos por portafolio" });
+  niceTicks(0, hi).forEach(t => { svg.appendChild(S("line", { x1: L, x2: W - R, y1: y(t), y2: y(t), stroke: css("--line") })); svg.appendChild(S("text", { x: L - 6, y: y(t) + 4, "text-anchor": "end" }, mill(t))); });
+  D.years.forEach((yy, i) => {
+    let acc = 0; const x = L + i * bw + bw * 0.25;
+    ports.forEach((p, k) => { const v = D.revenue[p][i]; svg.appendChild(S("rect", { x, y: y(acc + v), width: bw * 0.5, height: y(acc) - y(acc + v), fill: cols[k], opacity: yy === year ? 1 : 0.45 })); acc += v; });
+    svg.appendChild(S("text", { x: x + bw * 0.25, y: y(acc) - 5, "text-anchor": "middle", class: "val" }, mill(acc)));
+    svg.appendChild(S("text", { x: x + bw * 0.25, y: H - 10, "text-anchor": "middle" }, String(yy)));
+  });
+  document.getElementById("rev").replaceChildren(svg);
+}
+
+function renderBands() {
+  const ports = ["VT", "VA"], cols = [css("--s4"), css("--s5")];
+  legend("bandleg", ports.map((p, k) => [D.portfolios[p], cols[k]]));
+  const labels = D.bands.labels, hi = Math.max(...ports.flatMap(p => D.bands.series[p]));
+  const W = 520, H = 260, L = 56, R = 10, T = 16, B = 30, gw = (W - L - R) / labels.length;
+  const y = v => T + (H - T - B) * (1 - v / hi);
+  const svg = S("svg", { viewBox: `0 0 ${W} ${H}`, role: "img", "aria-label": "Liberación esperada del CSM" });
+  niceTicks(0, hi).forEach(t => { svg.appendChild(S("line", { x1: L, x2: W - R, y1: y(t), y2: y(t), stroke: css("--line") })); svg.appendChild(S("text", { x: L - 6, y: y(t) + 4, "text-anchor": "end" }, mill(t))); });
+  labels.forEach((lab, i) => {
+    ports.forEach((p, k) => { const v = D.bands.series[p][i]; const x = L + i * gw + gw * 0.12 + k * gw * 0.38; svg.appendChild(S("rect", { x, y: y(v), width: gw * 0.36, height: y(0) - y(v), fill: cols[k] })); });
+    svg.appendChild(S("text", { x: L + i * gw + gw / 2, y: H - 10, "text-anchor": "middle" }, lab === ">10" ? "más de 10" : "año " + lab));
+  });
+  document.getElementById("bands").replaceChildren(svg);
+}
+
+function renderSens() {
+  const rows = D.sens.filter(s => Math.abs(s.equity) >= 1000);
+  const m = Math.max(...rows.map(r => Math.abs(r.equity)));
+  const W = 520, rowH = 26, L = 215, R = 64, T = 8, H = T + rows.length * rowH + 8, mid = L + (W - L - R) / 2, half = (W - L - R) / 2 - 4;
+  const svg = S("svg", { viewBox: `0 0 ${W} ${H}`, role: "img", "aria-label": "Sensibilidades" });
+  svg.appendChild(S("line", { x1: mid, x2: mid, y1: T, y2: H - 8, stroke: css("--line") }));
+  rows.forEach((r, k) => {
+    const yy = T + k * rowH, w = Math.abs(r.equity) / m * half, x = r.equity >= 0 ? mid : mid - w;
+    svg.appendChild(S("text", { x: 0, y: yy + 17 }, `${D.portfolios[r.portfolio] || r.portfolio}: ${r.change}`));
+    svg.appendChild(S("rect", { x, y: yy + 5, width: Math.max(w, 1), height: rowH - 10, fill: r.equity >= 0 ? css("--good") : css("--loss"), rx: 2 }));
+    svg.appendChild(S("text", { x: W - 2, y: yy + 17, "text-anchor": "end", class: "val" }, (r.equity > 0 ? "+" : "") + compact(r.equity)));
+  });
+  document.getElementById("sens").replaceChildren(svg);
+}
+
+function renderTrc() {
+  const coh = document.getElementById("trccoh").value, series = D.trc[coh], names = Object.keys(series);
+  const cols = ["--s1", "--s2", "--s3", "--s4", "--s5", "--gold", "--loss"].map(css);
+  legend("trcleg", names.map((n, k) => [n.replace("claims", "siniestros").replace("rates", "tasas").replace("_", " ").replace("works_slower", "obra más lenta").replace("works_faster", "obra más rápida"), cols[k % cols.length]]));
+  const xs = [...new Set(names.flatMap(n => series[n].map(p => p[0])))].sort();
+  const W = 520, H = 250, L = 46, R = 14, T = 14, B = 30, lo = -6, hi = 6;
+  const x = v => L + (W - L - R) * (xs.indexOf(v) / Math.max(xs.length - 1, 1)), y = v => T + (H - T - B) * (1 - (v - lo) / (hi - lo));
+  const svg = S("svg", { viewBox: `0 0 ${W} ${H}`, role: "img", "aria-label": "Prueba de elegibilidad del PAA" });
+  svg.appendChild(S("rect", { x: L, y: y(5), width: W - L - R, height: y(-5) - y(5), fill: css("--accent-soft") }));
+  [-5, 0, 5].forEach(t => { svg.appendChild(S("line", { x1: L, x2: W - R, y1: y(t), y2: y(t), stroke: css("--line"), "stroke-dasharray": t ? "4 3" : "" })); svg.appendChild(S("text", { x: L - 6, y: y(t) + 4, "text-anchor": "end" }, t + "%")); });
+  xs.forEach(v => svg.appendChild(S("text", { x: x(v), y: H - 10, "text-anchor": "middle" }, String(v))));
+  names.forEach((n, k) => {
+    const pts = series[n]; svg.appendChild(S("polyline", { points: pts.map(p => x(p[0]) + "," + y(p[1])).join(" "), fill: "none", stroke: cols[k % cols.length], "stroke-width": 2 }));
+    pts.forEach(p => svg.appendChild(S("circle", { cx: x(p[0]), cy: y(p[1]), r: 3, fill: cols[k % cols.length] })));
+  });
+  document.getElementById("trc").replaceChildren(svg);
+}
+
+function renderConf() {
+  document.getElementById("conf").innerHTML = "Nivel de confianza equivalente del ajuste por riesgo (par. 119): " +
+    D.confidence.map(c => `${c.portfolio} ${(c.level * 100).toFixed(0)}%`).join(" · ") + ".";
+}
+
+function renderAll() { renderYears(); renderKpis(); renderStatements(); renderWaterfall(); renderGroups(); renderRevenue(); renderBands(); renderSens(); renderTrc(); renderConf(); }
+document.getElementById("wfport").onchange = renderWaterfall;
+document.getElementById("trccoh").onchange = renderTrc;
+renderAll();
+if (window.matchMedia) window.matchMedia("(prefers-color-scheme: dark)").addEventListener?.("change", renderAll);
+new MutationObserver(renderAll).observe(document.documentElement, { attributes: true, attributeFilter: ["data-theme"] });
+</script>

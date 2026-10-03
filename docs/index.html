@@ -1,0 +1,348 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Seguros Barú IFRS 17</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&family=Source+Serif+4:opsz,wght@8..60,600;8..60,700&display=swap">
+<style>
+/* Layout: an actuarial closing pack — year switch on top, statements side by side, then the CSM cascade, the groups and the disclosures. */
+:root {
+  --bg: #f2f5f4; --panel: #ffffff; --ink: #14232a; --muted: #56676c; --line: #d6dfdc;
+  --accent: #0c6870; --accent-soft: #d8ecec; --loss: #b0392d; --loss-soft: #f6dfdb; --gold: #8f6c12; --good: #2d7a4c;
+  --s1: #0c6870; --s2: #3b86ad; --s3: #8f6c12; --s4: #6d55a0; --s5: #5f8a2b;
+  --display: "Source Serif 4", Georgia, "Times New Roman", serif;
+  --body: "IBM Plex Sans", "Segoe UI", system-ui, sans-serif;
+  --mono: "IBM Plex Mono", ui-monospace, "SFMono-Regular", Menlo, monospace;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #0e1618; --panel: #142023; --ink: #e2ebe9; --muted: #9db0b2; --line: #263639;
+    --accent: #55b6be; --accent-soft: #173b3f; --loss: #e57d70; --loss-soft: #3b201c; --gold: #d8b04e; --good: #6cc08f;
+    --s1: #55b6be; --s2: #7ab8dc; --s3: #d8b04e; --s4: #a892d6; --s5: #9cc46a; color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #0e1618; --panel: #142023; --ink: #e2ebe9; --muted: #9db0b2; --line: #263639;
+  --accent: #55b6be; --accent-soft: #173b3f; --loss: #e57d70; --loss-soft: #3b201c; --gold: #d8b04e; --good: #6cc08f;
+  --s1: #55b6be; --s2: #7ab8dc; --s3: #d8b04e; --s4: #a892d6; --s5: #9cc46a; color-scheme: dark;
+}
+* { box-sizing: border-box; }
+body { background: var(--bg); color: var(--ink); font-family: var(--body); font-size: 15px; line-height: 1.5; margin: 0; }
+.wrap { max-width: 1160px; margin: 0 auto; padding-inline: 16px; padding-block: 28px 56px; display: grid; gap: 22px; }
+header { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: flex-end; gap: 16px; }
+.eyebrow { font-size: 12px; letter-spacing: .08em; text-transform: uppercase; color: var(--muted); margin: 0 0 4px; }
+h1 { font-family: var(--display); font-size: clamp(28px, 4vw, 40px); margin: 0; line-height: 1.1; text-wrap: balance; }
+h2 { font-family: var(--display); font-size: 21px; margin: 0; text-wrap: balance; }
+.sub { color: var(--muted); margin: 6px 0 0; max-width: 62ch; }
+.seg { display: inline-flex; border: 1px solid var(--line); border-radius: 8px; overflow: hidden; background: var(--panel); }
+.seg button { font: 500 14px var(--body); color: var(--ink); background: transparent; border: 0; padding: 8px 16px; cursor: pointer; }
+.seg button + button { border-left: 1px solid var(--line); }
+.seg button[aria-pressed="true"] { background: var(--accent); color: var(--panel); }
+.seg button:focus-visible, select:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+.kpis { display: grid; grid-template-columns: repeat(auto-fit, minmax(210px, 1fr)); gap: 12px; }
+.kpi { background: var(--panel); border: 1px solid var(--line); border-radius: 10px; padding: 14px 16px; display: grid; gap: 2px; }
+.kpi .k { font-size: 12px; letter-spacing: .06em; text-transform: uppercase; color: var(--muted); }
+.kpi .v { font-family: var(--mono); font-size: 26px; font-weight: 500; font-variant-numeric: tabular-nums; }
+.kpi .d { font-size: 13px; color: var(--muted); }
+.grid2 { display: grid; grid-template-columns: repeat(auto-fit, minmax(420px, 1fr)); gap: 22px; }
+@media (max-width: 480px) { .grid2 { grid-template-columns: 1fr; } }
+section.card { background: var(--panel); border: 1px solid var(--line); border-radius: 12px; padding: 18px; display: grid; gap: 12px; min-width: 0; }
+.head { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: baseline; gap: 8px; }
+.ref { font-family: var(--mono); font-size: 12px; color: var(--muted); }
+.note { color: var(--muted); font-size: 13px; margin: 0; max-width: 75ch; }
+.scroll { overflow-x: auto; }
+table { border-collapse: collapse; width: 100%; font-size: 14px; }
+th, td { padding: 6px 8px; border-bottom: 1px solid var(--line); text-align: right; white-space: nowrap; }
+th:first-child, td:first-child, .txt { text-align: left; white-space: normal; }
+th { font-size: 12px; font-weight: 600; color: var(--muted); letter-spacing: .03em; }
+td.num, th.num { font-family: var(--mono); font-variant-numeric: tabular-nums; }
+tr.total td { font-weight: 600; border-top: 1px solid var(--muted); }
+tr.grand td { background: var(--accent-soft); }
+td.sel, th.sel { background: color-mix(in srgb, var(--accent-soft) 60%, transparent); }
+tr.onerous td { background: var(--loss-soft); }
+.chip { display: inline-block; font: 600 11px var(--mono); letter-spacing: .04em; padding: 2px 7px; border-radius: 999px; border: 1px solid var(--line); }
+.chip.SIG { color: var(--good); border-color: var(--good); }
+.chip.RES { color: var(--gold); border-color: var(--gold); }
+.chip.ONE { color: var(--loss); border-color: var(--loss); }
+.chip.RE { color: var(--s2); border-color: var(--s2); }
+select { font: 14px var(--body); color: var(--ink); background: var(--panel); border: 1px solid var(--line); border-radius: 6px; padding: 5px 8px; }
+svg { width: 100%; height: auto; display: block; }
+svg text { fill: var(--muted); font-family: var(--body); font-size: 12px; }
+svg .val { fill: var(--ink); font-family: var(--mono); font-size: 11.5px; }
+.legend { display: flex; flex-wrap: wrap; gap: 6px 16px; font-size: 13px; color: var(--muted); }
+.legend span::before { content: ""; display: inline-block; width: 10px; height: 10px; border-radius: 2px; margin-right: 6px; background: var(--c); vertical-align: -1px; }
+.ok { color: var(--good); font-weight: 600; }
+footer { color: var(--muted); font-size: 13px; display: grid; gap: 6px; }
+footer a { color: var(--accent); }
+@media (prefers-reduced-motion: no-preference) { .bar { transition: opacity .2s; } }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <div>
+      <p class="eyebrow">Proyecto de portafolio · IFRS 17 · aseguradora ficticia con datos sintéticos</p>
+      <h1>Seguros Barú, S.A.</h1>
+      <p class="sub">Cierres al 31 de diciembre de 2023, 2024 y 2025, en USD. Vida temporal, vida con ahorro, autos, incendio/hogar, todo riesgo construcción y una cuota parte cedida.</p>
+    </div>
+    <div class="seg" role="group" aria-label="Año del cierre" id="years"></div>
+  </header>
+
+  <div class="kpis" id="kpis"></div>
+
+  <div class="grid2">
+    <section class="card">
+      <div class="head"><h2>Estado de resultados</h2><span class="ref">par. 80–92</span></div>
+      <div class="scroll"><table id="pl"></table></div>
+    </section>
+    <section class="card">
+      <div class="head"><h2>Estado de situación financiera</h2><span class="ref">par. 78–79</span></div>
+      <div class="scroll"><table id="bs"></table></div>
+      <p class="note" id="checknote"></p>
+    </section>
+  </div>
+
+  <section class="card">
+    <div class="head">
+      <h2>Cascada del margen contractual de servicio</h2>
+      <label class="ref" for="wfport">Portafolio
+        <select id="wfport">
+          <option value="VT">Vida temporal</option><option value="VA">Vida con ahorro</option><option value="RE_VT">Reaseguro cedido (costo neto)</option>
+        </select>
+      </label>
+    </div>
+    <div id="wf"></div>
+    <p class="note">Saldo inicial, contratos nuevos (par. 38), acreción a tasa bloqueada (B72(b)), cambios relacionados con servicio futuro (par. 44(c), B96), recuperación de pérdidas del reaseguro (66A) y liberación por unidades de cobertura (B119). Los aumentos que superan el CSM no lo vuelven negativo: van al componente de pérdida.</p>
+  </section>
+
+  <section class="card">
+    <div class="head"><h2>Grupos de contratos al cierre</h2><span class="ref">par. 14–24</span></div>
+    <div class="scroll"><table id="groups"></table></div>
+    <p class="note">SIG: sin posibilidad significativa de volverse oneroso; RES: el resto; ONE: oneroso. Las filas sombreadas tienen componente de pérdida. El valor en libros incluye el pasivo por siniestros incurridos; el reaseguro cedido es un activo.</p>
+  </section>
+
+  <div class="grid2">
+    <section class="card">
+      <div class="head"><h2>Ingresos por seguros por portafolio</h2><span class="ref">par. 83, B121–B126</span></div>
+      <div class="legend" id="revleg"></div>
+      <div id="rev"></div>
+    </section>
+    <section class="card">
+      <div class="head"><h2>Liberación esperada del CSM al 31-dic-2025</h2><span class="ref">par. 109</span></div>
+      <div class="legend" id="bandleg"></div>
+      <div id="bands"></div>
+    </section>
+  </div>
+
+  <div class="grid2">
+    <section class="card">
+      <div class="head"><h2>Sensibilidades al 31-dic-2025</h2><span class="ref">par. 128</span></div>
+      <div id="sens"></div>
+      <p class="note">Efecto en el patrimonio, neto de reaseguro. Los cambios no financieros que absorbe el CSM no aparecen: solo afectan a los grupos onerosos.</p>
+    </section>
+    <section class="card">
+      <div class="head">
+        <h2>TRC: PAA frente a GMM</h2>
+        <label class="ref" for="trccoh">Cohorte
+          <select id="trccoh"><option>2023</option><option>2024</option><option selected>2025</option></select>
+        </label>
+      </div>
+      <div class="legend" id="trcleg"></div>
+      <div id="trc"></div>
+      <p class="note">Diferencia del LRC con PAA respecto del GMM en cada cierre de la cobertura y en siete escenarios. Dentro de la banda de ±5% el PAA es elegible (par. 53(a), 54).</p>
+    </section>
+  </div>
+
+  <footer>
+    <div id="conf"></div>
+    <div>Seguros Barú es ficticia. Todos los datos son sintéticos, generados con semilla fija; las curvas de descuento son las HQM del Tesoro de EE. UU. al cierre de cada año. Motor en Python validado con los Ejemplos Ilustrativos del IASB. Autora: Heydi · <a href="https://github.com/Heydnz" target="_blank" rel="noopener">github.com/Heydnz</a></div>
+  </footer>
+</div>
+<script>
+const D = {"years": [2023, 2024, 2025], "pl": [{"label": "Ingresos por seguros", "key": "insurance_revenue", "values": [9780724.0, 21995636.0, 26742566.0]}, {"label": "Gastos del servicio de seguros", "key": "insurance_service_expenses", "values": [-9402412.0, -19796288.0, -23580953.0]}, {"label": "Resultado neto del reaseguro cedido", "key": "net_reinsurance", "values": [72222.0, -311236.0, -610563.0]}, {"label": "Resultado del servicio de seguros", "key": "insurance_service_result", "total": true, "values": [450534.0, 1888113.0, 2551051.0]}, {"label": "Ingresos de inversiones", "key": "investment_income", "values": [1279596.0, 1761017.0, 2232567.0]}, {"label": "Gastos financieros de seguros", "key": "insurance_finance_expenses", "values": [69651.0, -428759.0, -326366.0]}, {"label": "Ingresos financieros del reaseguro", "key": "reinsurance_finance_income", "values": [13219.0, 40519.0, 87040.0]}, {"label": "Resultado financiero neto", "key": "net_financial_result", "total": true, "values": [1362466.0, 1372778.0, 1993241.0]}, {"label": "Otros gastos no atribuibles", "key": "other_operating_expenses", "values": [-1219377.0, -1245768.0, -1295094.0]}, {"label": "Resultado antes de impuestos", "key": "profit_before_tax", "total": true, "grand": true, "values": [593623.0, 2015122.0, 3249198.0]}, {"label": "Otro resultado integral", "key": "oci", "values": [-580.0, -1162526.0, 885255.0]}, {"label": "Resultado integral total", "key": "total_comprehensive_income", "total": true, "values": [593043.0, 852596.0, 4134452.0]}], "bs": [{"label": "Inversiones a valor razonable con cambios en resultados", "key": "investments_fvpl", "values": [14299160.0, 27410252.0, 41779310.0]}, {"label": "Inversiones a valor razonable con cambios en ORI", "key": "investments_fvoci", "values": [20000000.0, 20017693.0, 20000000.0]}, {"label": "Activos por contratos de seguro", "key": "insurance_contract_assets", "values": [-0.0, -0.0, 38473.0]}, {"label": "Activos por reaseguro cedido", "key": "reinsurance_contract_assets", "values": [844072.0, 2083847.0, 3035118.0]}, {"label": "Total activos", "key": "total_assets", "total": true, "values": [35143232.0, 49511792.0, 64852902.0]}, {"label": "Pasivos por contratos de seguro", "key": "insurance_contract_liabilities", "values": [14550189.0, 28066153.0, 39272810.0]}, {"label": "Capital social", "key": "share_capital", "values": [20000000.0, 20000000.0, 20000000.0]}, {"label": "Resultados acumulados", "key": "retained_earnings", "values": [593623.0, 2608745.0, 5857943.0]}, {"label": "Reservas de ORI", "key": "reserves", "values": [-580.0, -1163106.0, -277851.0]}, {"label": "Total patrimonio", "key": "total_equity", "total": true, "grand": true, "values": [20593043.0, 21445639.0, 25580091.0]}], "check": [-0.0, -0.0, 0.0], "waterfall": {"VT-2023": {"opening": 0.0, "closing": 2726015.0, "steps": [{"label": "Contratos nuevos", "value": 3117509.0}, {"label": "Acreción", "value": 91111.0}, {"label": "Cambios de servicio futuro", "value": -338216.0}, {"label": "Liberación por servicios", "value": -144389.0}]}, "VT-2024": {"opening": 2726015.0, "closing": 4785364.0, "steps": [{"label": "Contratos nuevos", "value": 2940783.0}, {"label": "Acreción", "value": 224457.0}, {"label": "Cambios de servicio futuro", "value": -740350.0}, {"label": "Liberación por servicios", "value": -365541.0}]}, "VT-2025": {"opening": 4785364.0, "closing": 10836220.0, "steps": [{"label": "Contratos nuevos", "value": 4255001.0}, {"label": "Acreción", "value": 336446.0}, {"label": "Cambios de servicio futuro", "value": 2356655.0}, {"label": "Liberación por servicios", "value": -897245.0}]}, "VA-2023": {"opening": 0.0, "closing": 2278278.0, "steps": [{"label": "Contratos nuevos", "value": 2243791.0}, {"label": "Acreción", "value": 68602.0}, {"label": "Cambios de servicio futuro", "value": -15472.0}, {"label": "Liberación por servicios", "value": -18642.0}]}, "VA-2024": {"opening": 2278278.0, "closing": 4740464.0, "steps": [{"label": "Contratos nuevos", "value": 2128919.0}, {"label": "Acreción", "value": 179697.0}, {"label": "Cambios de servicio futuro", "value": 209687.0}, {"label": "Liberación por servicios", "value": -56119.0}]}, "VA-2025": {"opening": 4740464.0, "closing": 7084405.0, "steps": [{"label": "Contratos nuevos", "value": 2087856.0}, {"label": "Acreción", "value": 282299.0}, {"label": "Cambios de servicio futuro", "value": 74226.0}, {"label": "Liberación por servicios", "value": -100439.0}]}, "RE_VT-2023": {"opening": 0.0, "closing": -983949.0, "steps": [{"label": "Contratos nuevos", "value": -1078666.0}, {"label": "Acreción", "value": -32471.0}, {"label": "Cambios de servicio futuro", "value": 164983.0}, {"label": "Recuperación de pérdidas", "value": -90231.0}, {"label": "Liberación por servicios", "value": 52435.0}]}, "RE_VT-2024": {"opening": -983949.0, "closing": -1738210.0, "steps": [{"label": "Contratos nuevos", "value": -1029014.0}, {"label": "Acreción", "value": -79672.0}, {"label": "Cambios de servicio futuro", "value": 489099.0}, {"label": "Recuperación de pérdidas", "value": -269289.0}, {"label": "Liberación por servicios", "value": 134616.0}]}, "RE_VT-2025": {"opening": -1738210.0, "closing": -4017491.0, "steps": [{"label": "Contratos nuevos", "value": -1566291.0}, {"label": "Acreción", "value": -123608.0}, {"label": "Cambios de servicio futuro", "value": -1144697.0}, {"label": "Recuperación de pérdidas", "value": 226190.0}, {"label": "Liberación por servicios", "value": 329125.0}]}}, "groups": [{"closing": 2023, "portfolio": "VT", "group": "VT-2023-ONE", "class": "ONE", "model": "GMM", "csm": 0.0, "lc": 217915.0, "carrying": 242868.0}, {"closing": 2023, "portfolio": "VT", "group": "VT-2023-RES", "class": "RES", "model": "GMM", "csm": 492964.0, "lc": 0.0, "carrying": 103904.0}, {"closing": 2023, "portfolio": "VT", "group": "VT-2023-SIG", "class": "SIG", "model": "GMM", "csm": 2233051.0, "lc": 0.0, "carrying": 78776.0}, {"closing": 2024, "portfolio": "VT", "group": "VT-2023-ONE", "class": "ONE", "model": "GMM", "csm": 0.0, "lc": 379342.0, "carrying": 481113.0}, {"closing": 2024, "portfolio": "VT", "group": "VT-2023-RES", "class": "RES", "model": "GMM", "csm": 0.0, "lc": 172455.0, "carrying": 518790.0}, {"closing": 2024, "portfolio": "VT", "group": "VT-2023-SIG", "class": "SIG", "model": "GMM", "csm": 2232065.0, "lc": 0.0, "carrying": 490591.0}, {"closing": 2024, "portfolio": "VT", "group": "VT-2024-ONE", "class": "ONE", "model": "GMM", "csm": 0.0, "lc": 178158.0, "carrying": 173636.0}, {"closing": 2024, "portfolio": "VT", "group": "VT-2024-RES", "class": "RES", "model": "GMM", "csm": 0.0, "lc": 134152.0, "carrying": 219015.0}, {"closing": 2024, "portfolio": "VT", "group": "VT-2024-SIG", "class": "SIG", "model": "GMM", "csm": 2553299.0, "lc": 0.0, "carrying": 218394.0}, {"closing": 2025, "portfolio": "VT", "group": "VT-2023-ONE", "class": "ONE", "model": "GMM", "csm": 0.0, "lc": 157867.0, "carrying": 401144.0}, {"closing": 2025, "portfolio": "VT", "group": "VT-2023-RES", "class": "RES", "model": "GMM", "csm": 383868.0, "lc": 0.0, "carrying": 527110.0}, {"closing": 2025, "portfolio": "VT", "group": "VT-2023-SIG", "class": "SIG", "model": "GMM", "csm": 2310192.0, "lc": 0.0, "carrying": 954704.0}, {"closing": 2025, "portfolio": "VT", "group": "VT-2024-ONE", "class": "ONE", "model": "GMM", "csm": 0.0, "lc": 64686.0, "carrying": 178131.0}, {"closing": 2025, "portfolio": "VT", "group": "VT-2024-RES", "class": "RES", "model": "GMM", "csm": 463028.0, "lc": 0.0, "carrying": 311596.0}, {"closing": 2025, "portfolio": "VT", "group": "VT-2024-SIG", "class": "SIG", "model": "GMM", "csm": 2532110.0, "lc": 0.0, "carrying": 422688.0}, {"closing": 2025, "portfolio": "VT", "group": "VT-2025-RES", "class": "RES", "model": "GMM", "csm": 912382.0, "lc": 0.0, "carrying": 168155.0}, {"closing": 2025, "portfolio": "VT", "group": "VT-2025-SIG", "class": "SIG", "model": "GMM", "csm": 4234639.0, "lc": 0.0, "carrying": -38473.0}, {"closing": 2023, "portfolio": "VA", "group": "VA-2023-RES", "class": "RES", "model": "GMM", "csm": 24036.0, "lc": 0.0, "carrying": 82584.0}, {"closing": 2023, "portfolio": "VA", "group": "VA-2023-SIG", "class": "SIG", "model": "GMM", "csm": 2254242.0, "lc": 0.0, "carrying": 1998972.0}, {"closing": 2024, "portfolio": "VA", "group": "VA-2023-RES", "class": "RES", "model": "GMM", "csm": 28748.0, "lc": 0.0, "carrying": 206890.0}, {"closing": 2024, "portfolio": "VA", "group": "VA-2023-SIG", "class": "SIG", "model": "GMM", "csm": 2486414.0, "lc": 0.0, "carrying": 5425244.0}, {"closing": 2024, "portfolio": "VA", "group": "VA-2024-RES", "class": "RES", "model": "GMM", "csm": 50081.0, "lc": 0.0, "carrying": 140686.0}, {"closing": 2024, "portfolio": "VA", "group": "VA-2024-SIG", "class": "SIG", "model": "GMM", "csm": 2175220.0, "lc": 0.0, "carrying": 1949403.0}, {"closing": 2025, "portfolio": "VA", "group": "VA-2023-RES", "class": "RES", "model": "GMM", "csm": 31868.0, "lc": 0.0, "carrying": 319614.0}, {"closing": 2025, "portfolio": "VA", "group": "VA-2023-SIG", "class": "SIG", "model": "GMM", "csm": 2546278.0, "lc": 0.0, "carrying": 8156557.0}, {"closing": 2025, "portfolio": "VA", "group": "VA-2024-RES", "class": "RES", "model": "GMM", "csm": 56943.0, "lc": 0.0, "carrying": 362631.0}, {"closing": 2025, "portfolio": "VA", "group": "VA-2024-SIG", "class": "SIG", "model": "GMM", "csm": 2305375.0, "lc": 0.0, "carrying": 4931089.0}, {"closing": 2025, "portfolio": "VA", "group": "VA-2025-RES", "class": "RES", "model": "GMM", "csm": 30878.0, "lc": 0.0, "carrying": 91991.0}, {"closing": 2025, "portfolio": "VA", "group": "VA-2025-SIG", "class": "SIG", "model": "GMM", "csm": 2113064.0, "lc": 0.0, "carrying": 1827846.0}, {"closing": 2023, "portfolio": "RE_VT", "group": "RE-2023", "class": "RE", "model": "GMM", "csm": 983949.0, "lc": 87166.0, "carrying": -844072.0}, {"closing": 2024, "portfolio": "RE_VT", "group": "RE-2023", "class": "RE", "model": "GMM", "csm": 806863.0, "lc": 220719.0, "carrying": -1192097.0}, {"closing": 2024, "portfolio": "RE_VT", "group": "RE-2024", "class": "RE", "model": "GMM", "csm": 931347.0, "lc": 124924.0, "carrying": -891750.0}, {"closing": 2025, "portfolio": "RE_VT", "group": "RE-2023", "class": "RE", "model": "GMM", "csm": 991003.0, "lc": 63147.0, "carrying": -1302158.0}, {"closing": 2025, "portfolio": "RE_VT", "group": "RE-2024", "class": "RE", "model": "GMM", "csm": 1112064.0, "lc": 25874.0, "carrying": -967187.0}, {"closing": 2025, "portfolio": "RE_VT", "group": "RE-2025", "class": "RE", "model": "GMM", "csm": 1914424.0, "lc": 0.0, "carrying": -765773.0}, {"closing": 2023, "portfolio": "AUTO", "group": "AUTO-2023-RES", "class": "RES", "model": "PAA", "csm": null, "lc": 0.0, "carrying": 680941.0}, {"closing": 2023, "portfolio": "AUTO", "group": "AUTO-2023-SIG", "class": "SIG", "model": "PAA", "csm": null, "lc": 0.0, "carrying": 6062766.0}, {"closing": 2023, "portfolio": "INC", "group": "INC-2023-SIG", "class": "SIG", "model": "PAA", "csm": null, "lc": 0.0, "carrying": 2318950.0}, {"closing": 2023, "portfolio": "TRC", "group": "TRC-2023-SIG", "class": "SIG", "model": "PAA", "csm": null, "lc": 0.0, "carrying": 2980427.0}, {"closing": 2024, "portfolio": "AUTO", "group": "AUTO-2023-RES", "class": "RES", "model": "PAA", "csm": null, "lc": 0.0, "carrying": 243063.0}, {"closing": 2024, "portfolio": "AUTO", "group": "AUTO-2023-SIG", "class": "SIG", "model": "PAA", "csm": null, "lc": 0.0, "carrying": 2449316.0}, {"closing": 2024, "portfolio": "AUTO", "group": "AUTO-2024-RES", "class": "RES", "model": "PAA", "csm": null, "lc": 19115.0, "carrying": 746722.0}, {"closing": 2024, "portfolio": "AUTO", "group": "AUTO-2024-SIG", "class": "SIG", "model": "PAA", "csm": null, "lc": 0.0, "carrying": 6190201.0}, {"closing": 2024, "portfolio": "INC", "group": "INC-2023-SIG", "class": "SIG", "model": "PAA", "csm": null, "lc": 0.0, "carrying": 308411.0}, {"closing": 2024, "portfolio": "INC", "group": "INC-2024-SIG", "class": "SIG", "model": "PAA", "csm": null, "lc": 0.0, "carrying": 2483209.0}, {"closing": 2024, "portfolio": "TRC", "group": "TRC-2023-SIG", "class": "SIG", "model": "PAA", "csm": null, "lc": 0.0, "carrying": 2778121.0}, {"closing": 2024, "portfolio": "TRC", "group": "TRC-2024-SIG", "class": "SIG", "model": "PAA", "csm": null, "lc": 0.0, "carrying": 3043347.0}, {"closing": 2025, "portfolio": "AUTO", "group": "AUTO-2023-RES", "class": "RES", "model": "PAA", "csm": null, "lc": 0.0, "carrying": 116729.0}, {"closing": 2025, "portfolio": "AUTO", "group": "AUTO-2023-SIG", "class": "SIG", "model": "PAA", "csm": null, "lc": 0.0, "carrying": 1353088.0}, {"closing": 2025, "portfolio": "AUTO", "group": "AUTO-2024-RES", "class": "RES", "model": "PAA", "csm": null, "lc": 0.0, "carrying": 379436.0}, {"closing": 2025, "portfolio": "AUTO", "group": "AUTO-2024-SIG", "class": "SIG", "model": "PAA", "csm": null, "lc": 0.0, "carrying": 2126189.0}, {"closing": 2025, "portfolio": "AUTO", "group": "AUTO-2025-ONE", "class": "ONE", "model": "PAA", "csm": null, "lc": 1395.0, "carrying": 805629.0}, {"closing": 2025, "portfolio": "AUTO", "group": "AUTO-2025-SIG", "class": "SIG", "model": "PAA", "csm": null, "lc": 0.0, "carrying": 6090213.0}, {"closing": 2025, "portfolio": "INC", "group": "INC-2023-SIG", "class": "SIG", "model": "PAA", "csm": null, "lc": 0.0, "carrying": 55216.0}, {"closing": 2025, "portfolio": "INC", "group": "INC-2024-SIG", "class": "SIG", "model": "PAA", "csm": null, "lc": 0.0, "carrying": 188378.0}, {"closing": 2025, "portfolio": "INC", "group": "INC-2025-SIG", "class": "SIG", "model": "PAA", "csm": null, "lc": 0.0, "carrying": 2539156.0}, {"closing": 2025, "portfolio": "TRC", "group": "TRC-2023-SIG", "class": "SIG", "model": "PAA", "csm": null, "lc": 0.0, "carrying": 1485942.0}, {"closing": 2025, "portfolio": "TRC", "group": "TRC-2024-SIG", "class": "SIG", "model": "PAA", "csm": null, "lc": 0.0, "carrying": 2839910.0}, {"closing": 2025, "portfolio": "TRC", "group": "TRC-2025-SIG", "class": "SIG", "model": "PAA", "csm": null, "lc": 0.0, "carrying": 2639670.0}], "revenue": {"AUTO": [6125952.0, 12325295.0, 12592327.0], "INC": [2013571.0, 4048759.0, 4092006.0], "TRC": [107019.0, 897353.0, 2432571.0], "VT": [1189127.0, 3665183.0, 6126830.0], "VA": [345056.0, 1059046.0, 1498833.0]}, "bands": {"labels": ["1", "2", "3", "4", "5", "6-10", ">10"], "series": {"VT": [1072955.0, 1009118.0, 961013.0, 919008.0, 878604.0, 3535819.0, 2459703.0], "RE_VT": [-393574.0, -370267.0, -352713.0, -337394.0, -322660.0, -1301621.0, -939261.0], "VA": [126562.0, 141820.0, 156597.0, 170294.0, 184008.0, 1137020.0, 5168104.0]}}, "sens": [{"portfolio": "VT", "change": "mortalidad +10%", "profit": -282158.0, "equity": -282158.0}, {"portfolio": "VT", "change": "mortalidad -10%", "profit": 133532.0, "equity": 133532.0}, {"portfolio": "VT", "change": "caducidad +10%", "profit": 19155.0, "equity": 19155.0}, {"portfolio": "VT", "change": "caducidad -10%", "profit": -20327.0, "equity": -20327.0}, {"portfolio": "VT", "change": "gastos +10%", "profit": -27723.0, "equity": -27723.0}, {"portfolio": "VT", "change": "tasas +100 pb", "profit": 0.0, "equity": 29261.0}, {"portfolio": "VT", "change": "tasas -100 pb", "profit": 0.0, "equity": -58317.0}, {"portfolio": "VA", "change": "tasas +100 pb", "profit": -818868.0, "equity": -818868.0}, {"portfolio": "VA", "change": "tasas -100 pb", "profit": 266184.0, "equity": 266184.0}, {"portfolio": "AUTO", "change": "siniestros +5%", "profit": -361996.0, "equity": -361996.0}, {"portfolio": "AUTO", "change": "tasas +100 pb", "profit": 75263.0, "equity": 75263.0}, {"portfolio": "AUTO", "change": "tasas -100 pb", "profit": -77927.0, "equity": -77927.0}, {"portfolio": "INC", "change": "siniestros +5%", "profit": -35970.0, "equity": -35970.0}, {"portfolio": "TRC", "change": "siniestros +5%", "profit": -61979.0, "equity": -61979.0}, {"portfolio": "TRC", "change": "tasas +100 pb", "profit": 5134.0, "equity": 5134.0}, {"portfolio": "TRC", "change": "tasas -100 pb", "profit": -5209.0, "equity": -5209.0}, {"portfolio": "Inversiones", "change": "tasas +100 pb", "profit": -208897.0, "equity": -1808897.0}, {"portfolio": "Inversiones", "change": "tasas -100 pb", "profit": 208897.0, "equity": 1808897.0}], "trc": {"2023": {"base": [[2023, 1.39], [2024, -1.11], [2025, -3.4]], "claims_+20%": [[2023, 1.39], [2024, -0.89], [2025, -2.9]], "claims_-20%": [[2023, 1.39], [2024, -1.33], [2025, -3.89]], "rates_+100bp": [[2023, 1.39], [2024, -0.04], [2025, -2.73]], "rates_-100bp": [[2023, 1.39], [2024, -2.17], [2025, -4.07]], "works_faster": [[2023, 1.39], [2024, -1.28], [2025, -3.71]], "works_slower": [[2023, 1.39], [2024, -1.11], [2025, -3.36]]}, "2024": {"base": [[2024, 1.04], [2025, -1.45], [2026, -3.55]], "claims_+20%": [[2024, 1.04], [2025, -1.21], [2026, -3.01]], "claims_-20%": [[2024, 1.04], [2025, -1.7], [2026, -4.09]], "rates_+100bp": [[2024, 1.04], [2025, -0.43], [2026, -2.89]], "rates_-100bp": [[2024, 1.04], [2025, -2.47], [2026, -4.22]], "works_faster": [[2024, 1.04], [2025, -1.64], [2026, -3.87]], "works_slower": [[2024, 1.04], [2025, -1.46], [2026, -3.52]]}, "2025": {"base": [[2025, 0.75], [2026, -1.78], [2027, -3.99]], "claims_+20%": [[2025, 0.75], [2026, -1.64], [2027, -3.62]], "claims_-20%": [[2025, 0.75], [2026, -1.93], [2027, -4.35]], "rates_+100bp": [[2025, 0.75], [2026, -0.75], [2027, -3.33]], "rates_-100bp": [[2025, 0.75], [2026, -2.81], [2027, -4.64]], "works_faster": [[2025, 0.75], [2026, -1.93], [2027, -4.27]], "works_slower": [[2025, 0.75], [2026, -1.82], [2027, -3.98]]}}, "confidence": [{"portfolio": "Vida temporal", "level": 0.88}, {"portfolio": "Daños (LIC)", "level": 0.733}], "portfolios": {"VT": "Vida temporal", "VA": "Vida con ahorro", "AUTO": "Autos", "INC": "Incendio/hogar", "TRC": "Todo riesgo construcción", "RE_VT": "Reaseguro cedido"}};
+const css = n => getComputedStyle(document.documentElement).getPropertyValue(n).trim();
+const fmt = v => {
+  if (v === null || v === undefined) return "—";
+  const r = Math.round(v);
+  if (r === 0) return "–";
+  const s = Math.abs(r).toLocaleString("en-US").replace(/,/g, ".");
+  return r < 0 ? "(" + s + ")" : s;
+};
+const mill = v => (v / 1e6).toLocaleString("es-ES", { minimumFractionDigits: 1, maximumFractionDigits: 1 }) + " M";
+const compact = v => Math.abs(v) >= 1e6 ? mill(v) : (v < 0 ? "−" : "") + Math.round(Math.abs(v) / 1e3).toLocaleString("es-ES") + " mil";
+let year = 2025;
+try { const s = localStorage.getItem("baru-year"); if (s && D.years.includes(+s)) year = +s; } catch (e) {}
+
+function el(tag, attrs = {}, html = "") { const e = document.createElement(tag); for (const k in attrs) e.setAttribute(k, attrs[k]); e.innerHTML = html; return e; }
+const NS = "http://www.w3.org/2000/svg";
+function S(tag, attrs = {}, text) { const e = document.createElementNS(NS, tag); for (const k in attrs) e.setAttribute(k, attrs[k]); if (text !== undefined) e.textContent = text; return e; }
+function niceTicks(lo, hi, n = 5) {
+  const span = hi - lo || 1, raw = span / n, mag = Math.pow(10, Math.floor(Math.log10(raw)));
+  const step = [1, 2, 2.5, 5, 10].map(m => m * mag).find(s => span / s <= n) || 10 * mag;
+  const t = []; for (let v = Math.floor(lo / step) * step; v <= hi + 1e-9; v += step) t.push(v); return t;
+}
+
+function renderYears() {
+  const box = document.getElementById("years"); box.innerHTML = "";
+  D.years.forEach(y => {
+    const b = el("button", { type: "button", "aria-pressed": String(y === year), id: "y" + y }, String(y));
+    b.onclick = () => { year = y; try { localStorage.setItem("baru-year", y); } catch (e) {} renderAll(); };
+    box.appendChild(b);
+  });
+}
+
+function renderKpis() {
+  const i = D.years.indexOf(year);
+  const pl = k => D.pl.find(r => r.key === k).values, bs = k => D.bs.find(r => r.key === k).values;
+  const csmLife = y => D.groups.filter(g => g.closing === y && (g.portfolio === "VT" || g.portfolio === "VA")).reduce((a, g) => a + (g.csm || 0), 0);
+  const items = [
+    ["Ingresos por seguros", pl("insurance_revenue")],
+    ["Resultado antes de impuestos", pl("profit_before_tax")],
+    ["Patrimonio al cierre", bs("total_equity")],
+    ["CSM de vida al cierre", D.years.map(csmLife)],
+  ];
+  const box = document.getElementById("kpis"); box.innerHTML = "";
+  items.forEach(([k, v]) => {
+    const prev = i > 0 ? v[i - 1] : null;
+    const d = prev ? ((v[i] - prev) / Math.abs(prev) * 100) : null;
+    box.appendChild(el("div", { class: "kpi" },
+      `<span class="k">${k}</span><span class="v">USD ${mill(v[i])}</span><span class="d">${d === null ? "primer año de operación" : (d >= 0 ? "+" : "") + d.toFixed(0) + "% frente a " + (year - 1)}</span>`));
+  });
+}
+
+function statement(id, rows, cols) {
+  const t = document.getElementById(id); const i = D.years.indexOf(year);
+  let h = "<thead><tr><th>USD</th>" + cols.map((c, j) => `<th class="num${j === i ? " sel" : ""}">${c}</th>`).join("") + "</tr></thead><tbody>";
+  rows.forEach(r => {
+    h += `<tr class="${r.total ? "total" : ""}${r.grand ? " grand" : ""}"><td>${r.label}</td>` +
+      r.values.map((v, j) => `<td class="num${j === i ? " sel" : ""}">${fmt(v)}</td>`).join("") + "</tr>";
+  });
+  t.innerHTML = h + "</tbody>";
+}
+
+function renderStatements() {
+  statement("pl", D.pl, D.years.map(String));
+  statement("bs", D.bs, D.years.map(y => "31-dic-" + y));
+  const ok = D.check.every(c => Math.abs(c) < 1);
+  document.getElementById("checknote").innerHTML = ok
+    ? `<span class="ok">Cuadra:</span> activos menos pasivos es igual al patrimonio en los tres cierres (diferencia 0).`
+    : "Revisar: el balance no cuadra.";
+}
+
+function renderWaterfall() {
+  const port = document.getElementById("wfport").value;
+  const w = D.waterfall[port + "-" + year]; const box = document.getElementById("wf"); box.innerHTML = "";
+  const steps = [{ label: "Saldo inicial", value: w.opening, base: true }, ...w.steps, { label: "Saldo final", value: w.closing, base: true }];
+  let run = 0; const bars = steps.map(s => { if (s.base) { run = s.value; return { ...s, a: 0, b: s.value }; } const a = run; run += s.value; return { ...s, a, b: run }; });
+  const lo = Math.min(0, ...bars.map(b => Math.min(b.a, b.b))), hi = Math.max(...bars.map(b => Math.max(b.a, b.b)), 1);
+  const W = 760, H = 300, L = 70, R = 12, T = 18, B = 54, bw = (W - L - R) / bars.length;
+  const y = v => T + (H - T - B) * (1 - (v - lo) / (hi - lo));
+  const svg = S("svg", { viewBox: `0 0 ${W} ${H}`, role: "img", "aria-label": "Cascada del CSM" });
+  niceTicks(lo, hi).forEach(t => { svg.appendChild(S("line", { x1: L, x2: W - R, y1: y(t), y2: y(t), stroke: css("--line") })); svg.appendChild(S("text", { x: L - 8, y: y(t) + 4, "text-anchor": "end" }, mill(t))); });
+  bars.forEach((b, k) => {
+    const x = L + k * bw + bw * 0.15, top = y(Math.max(b.a, b.b)), h = Math.max(1, Math.abs(y(b.a) - y(b.b)));
+    const color = b.base ? css("--s1") : (b.value >= 0 ? css("--good") : css("--loss"));
+    svg.appendChild(S("rect", { x, y: top, width: bw * 0.7, height: h, fill: color, rx: 2, class: "bar" }));
+    svg.appendChild(S("text", { x: x + bw * 0.35, y: top - 5, "text-anchor": "middle", class: "val" }, (b.base || b.value < 0 ? "" : "+") + mill(b.value)));
+    const words = b.label.split(" "); const mid = Math.ceil(words.length / 2);
+    [words.slice(0, mid).join(" "), words.slice(mid).join(" ")].forEach((ln, j) => ln && svg.appendChild(S("text", { x: x + bw * 0.35, y: H - B + 18 + j * 14, "text-anchor": "middle" }, ln)));
+  });
+  box.appendChild(svg);
+}
+
+function renderGroups() {
+  const rows = D.groups.filter(g => g.closing === year).sort((a, b) => a.portfolio.localeCompare(b.portfolio) || a.group.localeCompare(b.group));
+  let h = "<thead><tr><th>Grupo</th><th class='txt'>Portafolio</th><th class='txt'>Modelo</th><th class='txt'>Rentabilidad</th><th class='num'>CSM</th><th class='num'>Componente de pérdida</th><th class='num'>Valor en libros</th></tr></thead><tbody>";
+  rows.forEach(g => {
+    h += `<tr class="${g.lc > 0 && g.class !== "RE" ? "onerous" : ""}"><td>${g.group}</td><td class="txt">${D.portfolios[g.portfolio]}</td><td class="txt">${g.model}</td>` +
+      `<td class="txt"><span class="chip ${g.class}">${g.class === "RE" ? "cedido" : g.class}</span></td><td class="num">${g.csm === null ? "—" : fmt(g.csm)}</td>` +
+      `<td class="num">${fmt(g.lc)}</td><td class="num">${fmt(g.carrying)}</td></tr>`;
+  });
+  document.getElementById("groups").innerHTML = h + "</tbody>";
+}
+
+function legend(id, items) { document.getElementById(id).innerHTML = items.map(([n, c]) => `<span style="--c:${c}">${n}</span>`).join(""); }
+
+function renderRevenue() {
+  const ports = ["AUTO", "INC", "TRC", "VT", "VA"], cols = ["--s1", "--s2", "--s3", "--s4", "--s5"].map(css);
+  legend("revleg", ports.map((p, k) => [D.portfolios[p], cols[k]]));
+  const tot = D.years.map((_, i) => ports.reduce((a, p) => a + D.revenue[p][i], 0)), hi = Math.max(...tot);
+  const W = 520, H = 260, L = 56, R = 10, T = 16, B = 30, bw = (W - L - R) / 3;
+  const y = v => T + (H - T - B) * (1 - v / hi);
+  const svg = S("svg", { viewBox: `0 0 ${W} ${H}`, role: "img", "aria-label": "Ingresos por portafolio" });
+  niceTicks(0, hi).forEach(t => { svg.appendChild(S("line", { x1: L, x2: W - R, y1: y(t), y2: y(t), stroke: css("--line") })); svg.appendChild(S("text", { x: L - 6, y: y(t) + 4, "text-anchor": "end" }, mill(t))); });
+  D.years.forEach((yy, i) => {
+    let acc = 0; const x = L + i * bw + bw * 0.25;
+    ports.forEach((p, k) => { const v = D.revenue[p][i]; svg.appendChild(S("rect", { x, y: y(acc + v), width: bw * 0.5, height: y(acc) - y(acc + v), fill: cols[k], opacity: yy === year ? 1 : 0.45 })); acc += v; });
+    svg.appendChild(S("text", { x: x + bw * 0.25, y: y(acc) - 5, "text-anchor": "middle", class: "val" }, mill(acc)));
+    svg.appendChild(S("text", { x: x + bw * 0.25, y: H - 10, "text-anchor": "middle" }, String(yy)));
+  });
+  document.getElementById("rev").replaceChildren(svg);
+}
+
+function renderBands() {
+  const ports = ["VT", "VA"], cols = [css("--s4"), css("--s5")];
+  legend("bandleg", ports.map((p, k) => [D.portfolios[p], cols[k]]));
+  const labels = D.bands.labels, hi = Math.max(...ports.flatMap(p => D.bands.series[p]));
+  const W = 520, H = 260, L = 56, R = 10, T = 16, B = 30, gw = (W - L - R) / labels.length;
+  const y = v => T + (H - T - B) * (1 - v / hi);
+  const svg = S("svg", { viewBox: `0 0 ${W} ${H}`, role: "img", "aria-label": "Liberación esperada del CSM" });
+  niceTicks(0, hi).forEach(t => { svg.appendChild(S("line", { x1: L, x2: W - R, y1: y(t), y2: y(t), stroke: css("--line") })); svg.appendChild(S("text", { x: L - 6, y: y(t) + 4, "text-anchor": "end" }, mill(t))); });
+  labels.forEach((lab, i) => {
+    ports.forEach((p, k) => { const v = D.bands.series[p][i]; const x = L + i * gw + gw * 0.12 + k * gw * 0.38; svg.appendChild(S("rect", { x, y: y(v), width: gw * 0.36, height: y(0) - y(v), fill: cols[k] })); });
+    svg.appendChild(S("text", { x: L + i * gw + gw / 2, y: H - 10, "text-anchor": "middle" }, lab === ">10" ? "más de 10" : "año " + lab));
+  });
+  document.getElementById("bands").replaceChildren(svg);
+}
+
+function renderSens() {
+  const rows = D.sens.filter(s => Math.abs(s.equity) >= 1000);
+  const m = Math.max(...rows.map(r => Math.abs(r.equity)));
+  const W = 520, rowH = 26, L = 215, R = 64, T = 8, H = T + rows.length * rowH + 8, mid = L + (W - L - R) / 2, half = (W - L - R) / 2 - 4;
+  const svg = S("svg", { viewBox: `0 0 ${W} ${H}`, role: "img", "aria-label": "Sensibilidades" });
+  svg.appendChild(S("line", { x1: mid, x2: mid, y1: T, y2: H - 8, stroke: css("--line") }));
+  rows.forEach((r, k) => {
+    const yy = T + k * rowH, w = Math.abs(r.equity) / m * half, x = r.equity >= 0 ? mid : mid - w;
+    svg.appendChild(S("text", { x: 0, y: yy + 17 }, `${D.portfolios[r.portfolio] || r.portfolio}: ${r.change}`));
+    svg.appendChild(S("rect", { x, y: yy + 5, width: Math.max(w, 1), height: rowH - 10, fill: r.equity >= 0 ? css("--good") : css("--loss"), rx: 2 }));
+    svg.appendChild(S("text", { x: W - 2, y: yy + 17, "text-anchor": "end", class: "val" }, (r.equity > 0 ? "+" : "") + compact(r.equity)));
+  });
+  document.getElementById("sens").replaceChildren(svg);
+}
+
+function renderTrc() {
+  const coh = document.getElementById("trccoh").value, series = D.trc[coh], names = Object.keys(series);
+  const cols = ["--s1", "--s2", "--s3", "--s4", "--s5", "--gold", "--loss"].map(css);
+  legend("trcleg", names.map((n, k) => [n.replace("claims", "siniestros").replace("rates", "tasas").replace("_", " ").replace("works_slower", "obra más lenta").replace("works_faster", "obra más rápida"), cols[k % cols.length]]));
+  const xs = [...new Set(names.flatMap(n => series[n].map(p => p[0])))].sort();
+  const W = 520, H = 250, L = 46, R = 14, T = 14, B = 30, lo = -6, hi = 6;
+  const x = v => L + (W - L - R) * (xs.indexOf(v) / Math.max(xs.length - 1, 1)), y = v => T + (H - T - B) * (1 - (v - lo) / (hi - lo));
+  const svg = S("svg", { viewBox: `0 0 ${W} ${H}`, role: "img", "aria-label": "Prueba de elegibilidad del PAA" });
+  svg.appendChild(S("rect", { x: L, y: y(5), width: W - L - R, height: y(-5) - y(5), fill: css("--accent-soft") }));
+  [-5, 0, 5].forEach(t => { svg.appendChild(S("line", { x1: L, x2: W - R, y1: y(t), y2: y(t), stroke: css("--line"), "stroke-dasharray": t ? "4 3" : "" })); svg.appendChild(S("text", { x: L - 6, y: y(t) + 4, "text-anchor": "end" }, t + "%")); });
+  xs.forEach(v => svg.appendChild(S("text", { x: x(v), y: H - 10, "text-anchor": "middle" }, String(v))));
+  names.forEach((n, k) => {
+    const pts = series[n]; svg.appendChild(S("polyline", { points: pts.map(p => x(p[0]) + "," + y(p[1])).join(" "), fill: "none", stroke: cols[k % cols.length], "stroke-width": 2 }));
+    pts.forEach(p => svg.appendChild(S("circle", { cx: x(p[0]), cy: y(p[1]), r: 3, fill: cols[k % cols.length] })));
+  });
+  document.getElementById("trc").replaceChildren(svg);
+}
+
+function renderConf() {
+  document.getElementById("conf").innerHTML = "Nivel de confianza equivalente del ajuste por riesgo (par. 119): " +
+    D.confidence.map(c => `${c.portfolio} ${(c.level * 100).toFixed(0)}%`).join(" · ") + ".";
+}
+
+function renderAll() { renderYears(); renderKpis(); renderStatements(); renderWaterfall(); renderGroups(); renderRevenue(); renderBands(); renderSens(); renderTrc(); renderConf(); }
+document.getElementById("wfport").onchange = renderWaterfall;
+document.getElementById("trccoh").onchange = renderTrc;
+renderAll();
+if (window.matchMedia) window.matchMedia("(prefers-color-scheme: dark)").addEventListener?.("change", renderAll);
+new MutationObserver(renderAll).observe(document.documentElement, { attributes: true, attributeFilter: ["data-theme"] });
+</script>
+
+</body>
+</html>

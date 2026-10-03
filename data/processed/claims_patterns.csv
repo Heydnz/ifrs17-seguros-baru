@@ -1,0 +1,21 @@
+line,description,development_year,cumulative_paid,incremental_paid
+ppauto,Private passenger auto liability/medical,1,0.390735,0.390735
+ppauto,Private passenger auto liability/medical,2,0.705877,0.315142
+ppauto,Private passenger auto liability/medical,3,0.846998,0.141121
+ppauto,Private passenger auto liability/medical,4,0.922267,0.075269
+ppauto,Private passenger auto liability/medical,5,0.961799,0.039532
+ppauto,Private passenger auto liability/medical,6,0.981469,0.01967
+ppauto,Private passenger auto liability/medical,7,0.991328,0.009859
+ppauto,Private passenger auto liability/medical,8,0.996416,0.005089
+ppauto,Private passenger auto liability/medical,9,0.999127,0.002711
+ppauto,Private passenger auto liability/medical,10,1.0,0.000873
+comauto,Commercial auto/truck liability/medical,1,0.260938,0.260938
+comauto,Commercial auto/truck liability/medical,2,0.533631,0.272693
+comauto,Commercial auto/truck liability/medical,3,0.721398,0.187767
+comauto,Commercial auto/truck liability/medical,4,0.846808,0.12541
+comauto,Commercial auto/truck liability/medical,5,0.921289,0.074481
+comauto,Commercial auto/truck liability/medical,6,0.958326,0.037037
+comauto,Commercial auto/truck liability/medical,7,0.978432,0.020105
+comauto,Commercial auto/truck liability/medical,8,0.987392,0.00896
+comauto,Commercial auto/truck liability/medical,9,0.993386,0.005994
+comauto,Commercial auto/truck liability/medical,10,1.0,0.006614

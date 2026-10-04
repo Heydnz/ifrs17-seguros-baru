@@ -1,0 +1,94 @@
+{
+  "entity": "Seguros Barú, S.A. (ficticia)",
+  "valuation_date": "2025-12-31",
+  "cohort_2025_initial_recognition": {
+    "VT-2025-RES": {
+      "n_policies": 3710.0,
+      "sum_insured": 448925000.0,
+      "pv_inflows": 28652344.89,
+      "pv_outflows": 26868214.54,
+      "risk_adjustment": 1421207.13,
+      "csm": 362923.23,
+      "loss_component": 0.0
+    },
+    "VT-2025-SIG": {
+      "n_policies": 21290.0,
+      "sum_insured": 2570500000.0,
+      "pv_inflows": 163579696.0,
+      "pv_outflows": 123019510.78,
+      "risk_adjustment": 5965534.37,
+      "csm": 34594650.84,
+      "loss_component": 0.0
+    }
+  },
+  "sets_classification": {
+    "agentes": "SIG",
+    "bancaseguros": "SIG",
+    "promo": "RES"
+  },
+  "csm_rollforward_2025": {
+    "VT-2025-RES": {
+      "opening": 362923.23,
+      "interest": 14516.93,
+      "release": -25329.12,
+      "closing": 352111.03
+    },
+    "VT-2025-SIG": {
+      "opening": 34594650.84,
+      "interest": 1383786.03,
+      "release": -2338557.23,
+      "closing": 33639879.65
+    }
+  },
+  "lic_2025": {
+    "rbns": 4240000.0,
+    "ibnr": 1862995.2,
+    "claim_handling": 0.0,
+    "risk_adjustment": 0.0,
+    "discounting": 0.0,
+    "total": 6102995.2
+  },
+  "pending_claims_listing": [
+    "SIN-00296",
+    "SIN-00358",
+    "SIN-00372",
+    "SIN-00378",
+    "SIN-00394",
+    "SIN-00401",
+    "SIN-00403",
+    "SIN-00418",
+    "SIN-00433",
+    "SIN-00437",
+    "SIN-00439",
+    "SIN-00440",
+    "SIN-00442",
+    "SIN-00443",
+    "SIN-00444",
+    "SIN-00445",
+    "SIN-00446",
+    "SIN-00448",
+    "SIN-00450",
+    "SIN-00452",
+    "SIN-00456",
+    "SIN-00457",
+    "SIN-00458",
+    "SIN-00462",
+    "SIN-00463",
+    "SIN-00464",
+    "SIN-00466",
+    "SIN-00467",
+    "SIN-00468",
+    "SIN-00471",
+    "SIN-00476",
+    "SIN-00478",
+    "SIN-00480",
+    "SIN-00486"
+  ],
+  "notes": {
+    "ra": "Cost of capital 6%; capital = mortality +15% shock, run off with sum insured in force.",
+    "csm_interest": "4% (tariff technical rate).",
+    "csm_release": "Straight line over the SI-weighted average term of the group.",
+    "ibnr": "25% of expected claims of Q4-2025.",
+    "listing": "Pending claims listing from the claims system, extracted 19-Dec-2025."
+  }
+}

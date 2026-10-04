@@ -1,0 +1,70 @@
+{
+  "entity": "Seguros Barú, S.A. (ficticia)",
+  "valuation_date": "2025-12-31",
+  "mortality": {
+    "table": "1980 CSO ANB, SOA tables 42 (male) and 36 (female)",
+    "best_estimate_factor_by_attained_age": {
+      "25-39": 0.7,
+      "40-49": 0.75,
+      "50+": 0.95
+    },
+    "annual_improvement": 0.01,
+    "improvement_base_year": 2025
+  },
+  "lapse_by_policy_year": [
+    0.08,
+    0.06,
+    0.04
+  ],
+  "expenses": {
+    "underwriting_cost_per_new_policy": 150.0,
+    "maintenance_per_policy_year": 60.0,
+    "claim_handling_per_claim": 200.0,
+    "inflation": 0.025
+  },
+  "commissions": {
+    "agentes": {
+      "first_year": 0.5,
+      "renewal": 0.05
+    },
+    "bancaseguros": {
+      "first_year": 0.3,
+      "renewal": 0.1
+    },
+    "promo": {
+      "first_year": 0.15,
+      "renewal": 0.05
+    }
+  },
+  "timing": "annual steps; premiums, commissions and expenses at the start of the year; deaths and claim handling at the end of the year",
+  "discount_curve": "HQM policy curve at the month before issue (locked-in), data/processed/discount_curves_monthly_2024-12.csv, column 'high'",
+  "risk_adjustment_policy": {
+    "technique": "cost of capital",
+    "coc_rate": 0.06,
+    "risks": [
+      "mortality +15%",
+      "lapse +/-50% (worst)",
+      "expenses +10% and inflation +1 pp"
+    ],
+    "correlation": {
+      "mortality-lapse": 0.0,
+      "mortality-expense": 0.25,
+      "lapse-expense": 0.5
+    },
+    "capital_run_off": "expected sum insured in force"
+  },
+  "grouping_policy": "annual cohorts; profitability assessed by sets of contracts = sales channel (par. 17)",
+  "onerous_stress": "mortality +15%, lapse +/-30% (adverse), expenses +10% (par. 16(b), 19)",
+  "csm_policy": "accretion at locked-in rates (B72(b)); release with coverage units = expected sum insured in force, undiscounted (B119)",
+  "lic_policy": "case reserves for reported claims; IBNR by actuarial methods; claim handling costs (B65(f)); risk adjustment (par. 37)",
+  "tariff_basis": {
+    "table": "1980 CSO 100%",
+    "interest": 0.04,
+    "lapses": "none",
+    "admin_per_year": 60.0,
+    "loading": {
+      "<50": 0.1,
+      "50+": 0.03
+    }
+  }
+}
